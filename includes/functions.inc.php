@@ -1,18 +1,14 @@
 <?php
-  function uidExists($conn, $name) {
-    $sql = "SELECT * FROM guests WHERE CONCAT(firstName,' ', lastName) = ?;";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-      header("location: ../rsvp.php?error=stmtfailed");
-      exit();
-    }
+  function uidExists($dbh, $name) {
+    $sql = "SELECT * FROM guests WHERE first_name || ' ' || last_name = ?;";
+    $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 
-    mysqli_stmt_bind_param($stmt, "s", $name);
-    mysqli_stmt_execute($stmt);
+    $stmt->bindValue(1, $name);
+    $stmt->execute();
 
-    $resultData = mysqli_stmt_get_result($stmt);
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($row = mysqli_fetch_assoc($resultData)) {
+    if ($row) {
       return $row;
     }
     else {
@@ -20,8 +16,49 @@
       return $result;
     }
 
-    mysqli_stmt_close($stmt);
+    $stmt->close();
   }
+
+  function familyExists($dbh, $family, $id) {
+    $sql = "select a.*, b.family_name from guests a left join family b on a.family_id = b.id  WHERE b.id = ? and a.id != ?;";
+    $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+/*
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+      header("location: ../rsvp.php?error=stmtfailed");
+      exit();
+    }
+*/
+    $stmt->bindValue(1, $family);
+    $stmt->bindValue(2, $id);
+    $stmt->execute();
+
+    $familymembers = array();
+    while ($row = $stmt->fetch())
+    {
+      $familymembers[] = $row["first_name"] . ' ' . $row["last_name"];
+      $familyname = $row["family_name"];
+    }
+    return array(
+    "members" => $familymembers,
+    "name" => $familyname
+    );
+    $stmt->close();
+  }
+/*
+    $var_str = var_export($row, true);
+    $var = "<?php\n\n\$text = $var_str;\n\n?>";
+    file_put_contents('filename.php', $var);
+    if ($row) {
+      return $row;
+    }
+    else {
+      $result = false;
+      return $result;
+    }
+
+    $stmt->close();
+  */
+
 
   function emptyInputLogin($name) {
     $result;
@@ -34,18 +71,30 @@
     return $result;
   }
 // Checks if firstname_lastname exists in DB
-  function loginUser($conn, $name) {
-    $uidExists = uidExists($conn, $name);
-    if ($uidExists == false) {
+  function loginUser($dbh, $name) {
+    $guestExists = uidExists($dbh, $name);
+    if ($guestExists == false) {
       header("location: ../rsvp.php?error=wronglogin");
       exit();
     }
 
     session_start();
-    $_SESSION["person_id"] = $uidExists["person_id"];
-    $_SESSION["firstName"] = $uidExists["firstName"];
-    $_SESSION["lastName"] = $uidExists["lastName"];
-    //email: $_SESSION["firstName"] = $uidExists["firstName"]
-    header("location: ../rsvp.php?hello=this is " . trim($_SESSION["firstName"]) . " my test");
+    $_SESSION["person_id"] = $guestExists["id"];
+    $_SESSION["firstName"] = $guestExists["first_name"];
+    $_SESSION["lastName"] = $guestExists["last_name"];
+    $_SESSION["family_id"] = $guestExists["family_id"];
+    //email: $_SESSION["firstName"] = $guestExists["firstName"]
+
+    $familyExists = familyExists($dbh, $_SESSION["family_id"], $_SESSION["person_id"]);
+    if ($familyExists == false) {
+      header("location: ../rsvp.php?guest=".trim($_SESSION["firstName"]) . " " .trim($_SESSION["lastName"]));
+      exit();
+    }
+    $var_str = var_export($familyExists, true);
+    $var = "<?php\n\n\$text = $var_str;\n\n?>";
+    file_put_contents('filename.php', $var);
+    $_SESSION["family_name"] = $familyExists["name"];
+    header("location: ../rsvp.php?guest=".trim($_SESSION["firstName"]) . " " .trim($_SESSION["firstName"]) . "&family="  .trim($_SESSION["family_name"]));
     exit();
+
   }

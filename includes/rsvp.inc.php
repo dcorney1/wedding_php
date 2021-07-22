@@ -11,7 +11,7 @@ if (isset($_POST["submit"])) {
      exit();
   }
 
-  loginUser($conn, $name);
+  loginUser($dbh, $name);
 }
 else {
   header("location: ../rsvp.php");

@@ -1,12 +1,4 @@
 <?php
-
-$serverName = "localhost";
-$dBUsername = "root";
-$dBPassword = "";
-$dBName = "wedding";
-
-$conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dBName);
-
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
+  //defin PDO - tell about the database file
+  $dir = 'sqlite:' . __DIR__ . '/wedding.sqlite';
+  $dbh  = new PDO($dir) or die("cannot open the database");
