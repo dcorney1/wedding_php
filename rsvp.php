@@ -6,6 +6,8 @@
     include_once 'nav.php'
   ?>
   <h2>RSVP</h2>
+</section>
+<section>
   <div class="">
 
     <?php
@@ -15,8 +17,6 @@
         <button type=\"submit\" name=\"submit\">Not ". trim($_SESSION["firstName"]). "!</button>
         </form>";
       }
-
-
       else {
         echo "
         <form action=\"includes/rsvp.inc.php\" method=\"post\">
@@ -26,6 +26,24 @@
         <button type=\"submit\" name=\"submit\">RSVP</button>
         </form>";
       }
+      if (isset($_SESSION["rsvp_status"])){
+        foreach ($_SESSION["rsvp_status"] as $event){
+          $event_name = $event[1]["event_name"];
+          echo "<p>" . $event_name . "</p>";
+          echo "<form action=\"includes/rsvp.inc.php\" method=\"post\">";
+          foreach ($event as $participant){
+            echo
+            "<legend>Welcome ". trim($participant[1]). " " .trim($participant[2]) ."!</legend>
+              <input type=\"radio\" name=\"rsvp\" value=\"yes\">yes
+              <input type=\"radio\" name=\"rsvp\" value=\"no\">no";
+            }
+          echo  "</form>";
+
+        }
+
+      }
+
+
     ?>
     <!-- <input type="text" name="name" placeholder="Full name..."> -->
     <!-- <input type="text" name="zip" placeholder="Zip Code...">
