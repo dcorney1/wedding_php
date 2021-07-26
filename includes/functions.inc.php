@@ -77,14 +77,10 @@
         $event_id = $row["event_id"];
         //$rsvps[] = array("event_id" => $event_id, array());
       }
-      $rsvps[$event_id][] = array("id" => $row["id"], "event_name" => $row["event_name"],$row["guests_id"],$row["first_name"],$row["last_name"],$row["rsvp_flag"]);
+      $rsvps[$event_id][] = array("id" => $row["id"], "event_name" => $row["event_name"],"guests_id" => $row["guests_id"],"guest_first_name" => $row["first_name"],"guest_last_name" => $row["last_name"],"rsvp_flag" => $row["rsvp_flag"]);
     //$rsvps[$event_id][] = array($row["id"],"event_name" => $row["event_name"],($row["first_name"],$row["last_name"],$row["rsvp_flag"]);)
     }
-    $var_str = var_export($rsvps, true);
-    $var = "<?php\n\n\$text = $var_str;\n\n?>";
-    file_put_contents('filename.php', $var);
     return $rsvps;
-    $stmt->close();
   }
 /*
     $var_str = var_export($row, true);
@@ -128,17 +124,33 @@
     //email: $_SESSION["firstName"] = $guestExists["firstName"]
 
     $familyExists = familyExists($dbh, $_SESSION["family_id"], $_SESSION["person_id"]);
-    if (count($familyExists["members"]) == 1) {
-      header("location: ../rsvp.php?guest=".trim($_SESSION["firstName"]) . " " .trim($_SESSION["lastName"]));
-      exit();
-    }
-
     $_SESSION["family_name"] = $familyExists["name"];
     //$_SESSION["members"] = $familyExists["members"];
     $_SESSION["family_id"] = $familyExists["family_id"];
     $rsvp_status = getevents($dbh, $_SESSION["family_id"]);
     $_SESSION["rsvp_status"] = $rsvp_status;
+
+    if (count($familyExists["members"]) > 1) {
+      header("location: ../rsvp.php?guest=".trim($_SESSION["firstName"]) . " " .trim($_SESSION["lastName"]));
+      exit();
+    }
     header("location: ../rsvp.php?guest=".trim($_SESSION["firstName"]) . " " .trim($_SESSION["firstName"]) . "&family="  .trim($_SESSION["family_name"]));
     exit();
 
   }
+
+
+  function updateRSVP($dbh, $idArray) {
+    $sql = "update in_event set rsvp_flag = ? where id = ?;";
+    $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+    foreach ($idArray as $key => $value) {
+        $stmt->execute([$value, $key]);
+    }
+    session_start();
+    $rsvp_status = getevents($dbh, $_SESSION["family_id"]);
+    $_SESSION["rsvp_status"] = $rsvp_status;
+
+    header("location: ../rsvp.php?rsvp=complete");
+    exit();
+
+}

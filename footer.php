@@ -9,6 +9,8 @@
   <script src="java/menu.js"></script>
   <!--JavaScript to give countdown until August 27 2022-->
   <script src="java/countdown.js"></script>
+  <!--Script for RSVP forms only -->
+  <script src="java/form.js"></script>
   </body>
   </html>
 </section>
