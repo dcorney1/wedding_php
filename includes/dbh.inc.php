@@ -1,6 +1,6 @@
 <?php
   //defin PDO - tell about the database file
-  $dir = 'sqlite:' . dirname(dirname(dirname(dirname(__DIR__)))) . '/db/wedding.sqlite';
+  $dir = 'sqlite:' . __DIR__ . '/wedding.sqlite';
 
   $dbh  = new PDO($dir) or die("cannot open the database");
   $var_str = var_export($dir, true);
