@@ -2,9 +2,6 @@
   include_once 'header.php'
 ?>
 <section class="header">
-  <script src="java/menu.js"></script>
-  <script src="java/countdown.js"></script>
-  <script src="java/form.js"></script>
   <?php
     include_once 'nav.php'
   ?>
@@ -26,3 +23,6 @@
 </section>
 <!------stuff if we want another section--->
 <!-- Footer -->
+<?php
+  include_once 'footer.php'
+?>
