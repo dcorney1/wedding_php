@@ -1,3 +1,10 @@
+/* baskerville BT */
+
+@font-face {
+		font-family: baskervillebt-regular;
+		src: url(includes/font/BaskervilleBT.ttf);
+}
+
 *{
 	margin: 0;
 	padding: 0;
@@ -13,6 +20,7 @@ body {
 	padding:0;
 	width: 100%;
   overflow-x: hidden;
+	font-family: baskervillebt-regular;
 }
 
 .header{
@@ -29,6 +37,11 @@ body {
 	background-size: cover;
 	position: relative;
 }
+
+.footer{
+	background-color: rgba(170 , 121 , 130, 0.3);
+}
+
 
 nav{
 	display: flex;
@@ -89,7 +102,7 @@ nav img{
 }
 
 .text-box p{
-	margin: 10px 0 40px;
+	/* margin: 10px 0 40px; */
 	font-size: 40px;
 	color: #fff;
 }
@@ -116,10 +129,31 @@ nav .fa{
 	display: none;
 }
 
+.home-col{
+	flex-basis: 46%;
+	/* padding: 30px 2px; */
+}
 
-@media(max-width:700px)  {
+#left{
+	text-align: right;
+}
+
+#right{
+	text-align: left;
+}
+
+.home-divider{
+	border-left: 4px solid rgb(110 , 115 , 87);
+}
+
+
+@media(max-width:835px)  {
+	.text-box {
+		top: 40%;
+	}
+
 	.text-box h1{
-		font-size: 20px;
+		font-size: 36px;
 	}
 	.nav-links ul li {
 		display: inline-block;
@@ -152,10 +186,27 @@ nav .fa{
 
 	.row{
 		flex-direction: column;
+		text-align: center;
+	}
+
+	#home{
+		margin-left: 20%;
+		margin-right: 20%;
+	}
+
+	#left{
+		text-align: center;
+	}
+
+	#right{
+		text-align: center;
 	}
 
 	.divider{
 		border-top: 6px solid rgb(110 , 115 , 87);
+	}
+	.home-divider{
+		border-top: 2px solid rgb(110 , 115 , 87);
 	}
 }
 
@@ -190,8 +241,8 @@ nav .fa{
 	height: 50vh;
 	width: 100%;
 	background-image: linear-gradient(
-		rgba(219,  200,  182, 0.3),
-		rgba(219,  200,  182, 0.3)),
+		rgba(219,  200,  182, 0.5),
+		rgba(219,  200,  182, 0.5)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
 		url(images/travel.png)
@@ -202,27 +253,75 @@ nav .fa{
 		position: relative;
 }
 
+#travel {
+	background-image: linear-gradient(
+		rgba(219,  200,  182, .5),
+		rgba(219,  200,  182, .5)),
+		/*rgba(110 , 115 , 87, 0.5),
+		rgba(110 , 115 , 87, 0.5)),*/
+		url(images/ponds.png)
+		;
+}
+
+#events {
+	background-image: linear-gradient(
+		rgba(219,  200,  182, .5),
+		rgba(219,  200,  182, .5)),
+		/*rgba(110 , 115 , 87, 0.5),
+		rgba(110 , 115 , 87, 0.5)),*/
+		url(images/ponds.png)
+		;
+}
+
 .sub-header h1{
-	margin-top: 100px;
+	margin-top: 0px;
 }
 
 .travel{
-	width: 80%;
+	margin: 0 10%;
 	margin: auto;
 	padding-top: 15px;
 	padding-bottom: 50px;
+	text-align: center;
+	background-color: rgba(170 , 121 , 130, 0.3);
+}
+
+.travel h1 {
+	font-size: 30px;
+	text-align: center;
+	padding: 20px;
+}
+
+.travel h2 {
+	font-size: 20px;
+	text-align: center;
+	padding: 5px;
+}
+
+ .details {
+	max-width: 300px;
+	margin: 5px auto;
+	/* adding padding */
+	text-align: left;
 }
 
 .row
 {
-    margin-top: 5%;
+    margin-top: 0%;
+		margin-bottom: 0%;
     display: flex;
-    justify-content: space-between;
+    text-align: center;
+		justify-content: center;
 }
+
+.row p{
+	/* display: block; */
+}
+
 
 .travel-col{
 	flex-basis: 46%;
-	padding: 30px 2px;
+	padding: 10px 2px;
 }
 
 .travel-col img{
@@ -234,7 +333,7 @@ nav .fa{
 }
 
 .travel-col p{
-	padding: 15px 0 25px;
+	padding: 0px 0 0px;
 }
 
 .divider{
