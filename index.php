@@ -2,6 +2,7 @@
   include_once 'header.php'
 ?>
 <section class="header">
+
   <?php
     include_once 'nav.php'
   ?>
@@ -19,10 +20,7 @@
     </div>
     <a href="travel.php" class="hero-btn">Click Here for More Details</a>
 </div>
-
+  <script src="java/menu.js"></script>
 </section>
 <!------stuff if we want another section--->
 <!-- Footer -->
-<?php
-  include_once 'footer.php'
-?>
