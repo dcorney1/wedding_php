@@ -173,7 +173,12 @@ nav .fa{
 
 @media(max-width:700px)  {
 	.text-box {
+		top: 70%;
+	}
+
+	.header .text-box{
 		top: 50%;
+
 	}
 
 	.text-box h1{
