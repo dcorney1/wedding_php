@@ -13,11 +13,13 @@
 html {
   margin: 0 auto;
   padding: 0;
+	height: 100vh;
   overflow-x: hidden;
 }
 body {
   margin: 0 auto;
 	padding:0;
+	height: 100vh;
 	width: 100%;
   overflow-x: hidden;
 	font-family: baskervillebt-regular;
@@ -27,8 +29,8 @@ body {
 	min-height: 100vh;
 	width: 100%;
 	background-image: linear-gradient(
-		rgba(219,  200,  182, 0.3),
-		rgba(219,  200,  182, 0.3)),
+		rgba(219,  200,  182, 0.15),
+		rgba(219,  200,  182, 0.15)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
 		url(images/bannersmall.png)
@@ -39,7 +41,7 @@ body {
 }
 
 .footer{
-	background-color: rgba(170 , 121 , 130, 0.3);
+	background-color: rgba(110, 115, 87, .15);
 }
 
 
@@ -51,7 +53,7 @@ nav{
 }
 
 nav img{
-	width: 150px;
+	width: 120px;
 }
 
 .nav-links{
@@ -62,7 +64,7 @@ nav img{
 .nav-links ul li {
 	list-style: none;
 	display: inline-block;
-	padding: 8px 20px;
+	padding: 8px 10px;
 	position: relative;
 }
 
@@ -87,8 +89,18 @@ nav img{
 	width:100%;
 }
 
-.text-box{
+.header .text-box{
 	width: 90%;
+	color: #fff;
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+
+.sub-header .text-box{
+	width: 50%;
 	color: #fff;
 	position: absolute;
 	top: 50%;
@@ -136,25 +148,42 @@ nav .fa{
 
 #left{
 	text-align: right;
+
+	margin-right: 2.5%;
 }
 
 #right{
 	text-align: left;
+	margin-left: 2.5%;
+
 }
+
+/* #home{
+	margin-left: 20%;
+	margin-right: 20%;
+} */
+
+
 
 .home-divider{
 	border-left: 4px solid rgb(110 , 115 , 87);
+	visibility: hidden;
 }
 
 
 @media(max-width:700px)  {
 	.text-box {
-		top: 40%;
+		top: 50%;
 	}
 
 	.text-box h1{
 		font-size: 36px;
 	}
+
+	.text-box .row{
+		margin-top: 60%;
+	}
+
 	.nav-links ul li {
 		display: inline-block;
 	}
@@ -177,7 +206,7 @@ nav .fa{
 		cursor: pointer;
 	}
 	.nav-links ul{
-		padding-left: 10px;
+		padding-left: 30px;
 	}
 	.nav-links ul li:hover::after{
 		background:#fff;
@@ -207,6 +236,7 @@ nav .fa{
 	}
 	.home-divider{
 		border-top: 2px solid rgb(110 , 115 , 87);
+		visibility: visible;
 	}
 }
 
@@ -219,8 +249,8 @@ nav .fa{
 }
 
 .footer h4{
-	margin-bottom: 25px;
-	margin-top: 20px;
+	margin-bottom: 2.5%;
+	margin-top: 2.5%;
 	font-weight: 600;
 }
 
@@ -241,8 +271,8 @@ nav .fa{
 	height: 50vh;
 	width: 100%;
 	background-image: linear-gradient(
-		rgba(219,  200,  182, 0.5),
-		rgba(219,  200,  182, 0.5)),
+		rgba(219,  200,  182, 0.3),
+		rgba(219,  200,  182, 0.3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
 		url(images/travel.png)
@@ -255,8 +285,8 @@ nav .fa{
 
 #travel {
 	background-image: linear-gradient(
-		rgba(219,  200,  182, .5),
-		rgba(219,  200,  182, .5)),
+		rgba(0,  0,  0, .3),
+		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
 		url(images/ponds.png)
@@ -265,8 +295,8 @@ nav .fa{
 
 #events {
 	background-image: linear-gradient(
-		rgba(219,  200,  182, .5),
-		rgba(219,  200,  182, .5)),
+		rgba(0,  0,  0, .3),
+		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
 		url(images/ponds.png)
@@ -283,7 +313,7 @@ nav .fa{
 	padding-top: 15px;
 	padding-bottom: 50px;
 	text-align: center;
-	background-color: rgba(170 , 121 , 130, 0.3);
+	background-color: rgba(110, 115, 87, .15);
 }
 
 .travel h1 {
@@ -296,6 +326,11 @@ nav .fa{
 	font-size: 20px;
 	text-align: center;
 	padding: 5px;
+}
+
+.travel-container {
+	 margin-left: 10%;
+	 margin-right: 10%;
 }
 
  .details {
@@ -341,13 +376,15 @@ nav .fa{
 }
 
  .red-btn{
-	border: 1px solid #f44336;
-	background: transparent;
-	color: #f44336;
+	font-size: 16px;
+	border: 3px solid rgba(110, 115, 87, 1);
+	background: #fff;
+	color: rgba(110, 115, 87, 1);
 }
 
 .red-btn:hover{
 	color:#fff;
+	border: 3px solid rgba(110, 115, 87, 1);
 }
 
 /*Style the rsvpForm */

@@ -15,9 +15,9 @@
     <h1>Friday, August 26th</h1>
     <h2>Welcome Dinner</h2>
     <div class="details">
-    <p>Where: Backyard at the Essex</p>
+    <p>Where: Backyard at The Essex</p>
     <p>Address: 70 Essex Way,</p><p> Essex Junction, VT 05452</p>
-    <p>When: Time TBD</p>
+    <p>When: Evening, Exact Time TBD</p>
     </div>
   </div>
   <div class="date-header">
@@ -27,9 +27,9 @@
       <div class="travel-col">
         <h2>Ceremony</h2>
         <div class="details">
-        <p>Where: St. Pius X</p>
-        <p>Address: 575 Candia Rd,</p><p> Manchester, NH 03109</p>
-        <p>When: Time TBD</p>
+        <p>Where: St. Pius X Catholic Church</p>
+        <p>Address: 20 Jericho Road,</p><p> Essex Junction, VT 05452</p>
+        <p>When: 2:30 PM</p>
           </div>
       </div>
       <div class="divider">
@@ -39,7 +39,7 @@
         <div class="details">
         <p>Where: The Ponds at Bolton Valley</p>
         <p>Address: 3233 Bolton Valley Access Rd,</p><p> Bolton, VT 05676</p>
-        <p>When: Time TBD</p>
+        <p>When: Immediately Following Ceremony</p>
           </div>
       </div>
   </div>

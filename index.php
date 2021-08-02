@@ -20,6 +20,7 @@
     </div>
     <a href="travel.php" class="hero-btn">Click Here for More Details</a>
 </div>
+  <script src="java/countdown.js"></script>
   <script src="java/menu.js"></script>
 </section>
 <!------stuff if we want another section--->
