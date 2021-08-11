@@ -1,14 +1,15 @@
 <?php
   include_once 'header.php'
 ?>
-<section class="sub-header">
+<section class="sub-header" id="faq">
   <?php
     include_once 'nav.php'
   ?>
-  <h1>Coming Soon</h1>
-</section>
+  <div class="text-box">
+      <h1>Coming Soon</h1>
+    </div>
+      <script src="java/countdown.js"></script>
+      <script src="java/menu.js"></script>
+    </section>
 <!-- Travel Content -->
 <!-- Footer -->
-<?php
-  include_once 'footer.php'
-?>

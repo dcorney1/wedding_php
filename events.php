@@ -11,6 +11,9 @@
 </section>
 <!-- Travel Content -->
 <section class="travel">
+  <div class="travel-container">
+
+
   <div class="date-header">
     <h1>Friday, August 26th</h1>
     <h2>Welcome Dinner</h2>
@@ -53,6 +56,7 @@
         <p>When: Time TBD</p>
           </div>
   </div>
+    </div>
 </section>
 <!-- Footer -->
 <?php
