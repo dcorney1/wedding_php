@@ -20,6 +20,7 @@
         <p>The weekend's events will take place here. Transportation to and from the ceremony and reception will be provided from The Essex. Use the link below to reserve a room in our block.</p>
 
         <p><br>(Note: More room options are available by clicking "View More Rooms")</p>
+        <p><br></p>
         <a href="https://be.synxis.com/?adult=1&arrive=2022-08-26&chain=21123&child=0&currency=USD&depart=2022-08-28&group=3807KL&hotel=34805&level=hotel&locale=en-US&rooms=1" class="hero-btn red-btn" target="_blank">Book Now</a>
   <div class="date-header">
       <h1>Getting There</h1>

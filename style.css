@@ -4,6 +4,11 @@
 		font-family: baskervillebt-regular;
 		src: url(includes/font/BaskervilleBT.ttf);
 }
+@font-face {
+		font-family: baskervillebt-regular;
+		src: url(includes/font/BaskervilleBoldBT.ttf);
+		font-weight: bold;
+}
 
 *{
 	margin: 0;
@@ -323,10 +328,6 @@ nav .fa{
 		margin-right: 20%;
 	}
 
-	#left{
-
-	}
-
 	.divider{
 		border-top: 6px solid rgb(110 , 115 , 87);
 	}
@@ -537,4 +538,12 @@ input.invalid {
 	display: inline-block;
 	text-align: center;
 	width: 100%;
+}
+
+.event_time{
+	font-weight: bold;
+}
+
+.event_location{
+	font-weight: bold;
 }
