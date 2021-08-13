@@ -67,7 +67,7 @@ body {
 		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
-		url(images/walking.png)
+		url(images/events.png)
 		;
 }
 
@@ -99,7 +99,7 @@ body {
 		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
-		url(images/quizzical.png)
+		url(images/faq.png)
 		;
 }
 
@@ -235,6 +235,70 @@ nav .fa{
 .home-divider{
 	border-left: 4px solid rgb(110 , 115 , 87);
 	visibility: hidden;
+}
+
+
+/* picture carousel */
+/* currently always has a 500px height */
+.carousel-container{
+	position: relative;
+	width: 80vw;
+	height: 30vh;
+	margin: auto;
+	border: 5px solid black;
+	overflow: hidden;
+}
+
+.carousel-slide{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	/* transition: xxx; */
+}
+
+.carousel-slide div{
+	flex-shrink: 0;
+	position: relative;
+	height:100%;
+	width: 100%;
+	background-color: black;
+}
+
+div img {
+	max-height:100%;
+	/* max-width: 100%; */
+}
+
+
+#prevBtn{
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	z-index: 10;
+	left: 5%;
+	font-size: 30px;
+	color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	/* position: relative; */
+}
+
+#nextBtn{
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	z-index: 10;
+	right: 5%;
+	font-size: 30px;
+	color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	/* position: relative; */
 }
 
 
