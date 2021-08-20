@@ -42,9 +42,6 @@
         <h1>Things to do</h1>
   </div>
         <p>We will update with fun activities soon!</p>
-  <div class="map-wrapper">
-        <iframe class="googlemap" src="https://www.google.com/maps/d/embed?mid=14Hb9OMDu9bx9n0cyL3V7rPkOy2Wp6Cx0" width="640" height="480"></iframe>
-  </div>
 </div>
 </section>
 <!-- Footer -->
