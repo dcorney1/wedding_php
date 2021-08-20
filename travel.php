@@ -42,34 +42,10 @@
         <h1>Things to do</h1>
   </div>
         <p>We will update with fun activities soon!</p>
+  <div class="map-wrapper">
+        <iframe class="googlemap" src="https://www.google.com/maps/d/embed?mid=14Hb9OMDu9bx9n0cyL3V7rPkOy2Wp6Cx0" width="640" height="480"></iframe>
+  </div>
 </div>
-<div class="carousel-container">
-  <i class="fa fa-arrow-left"  id="prevBtn" aria-hidden="true"></i>
-  <i class="fa fa-arrow-right" id="nextBtn" aria-hidden="true"></i>
-  <div class="carousel-slide">
-    <div id="lastClone" >
-      <img src="./images/banner.png" alt="">
-    </div>
-    <div>
-      <img src="./images/about_us.png" alt="">
-    </div>
-    <div>
-      <img src="./images/faq.png" alt="">
-    </div>
-    <div>
-      <img src="./images/events.png" alt="">
-    </div>
-    <div>
-      <img src="./images/ponds.png" alt="">
-    </div>
-    <div>
-      <img src="./images/banner.png" alt="">
-    </div>
-    <div id="firstClone">
-      <img src="./images/about_us.png"  alt="">
-    </div>
-  </div>
-  </div>
 </section>
 <!-- Footer -->
 <?php

@@ -7,9 +7,15 @@ const nextBtn = document.querySelector('#nextBtn');
 
 //Counter
 let counter = 1;
-const size = carouselImages[0].clientWidth;
+let size = carouselImages[0].clientWidth;
 
 carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
+
+window.addEventListener("resize", ()=>{
+    console.log('Window Resized');
+  size = carouselImages[0].clientWidth;
+  carouselSlide.style.transform = 'translateX(' + (-size*counter) + 'px)';
+});
 
 //Button Listeners
 nextBtn.addEventListener('click', ()=>{
@@ -27,7 +33,6 @@ prevBtn.addEventListener('click', ()=>{
 });
 
 carouselSlide.addEventListener('transitionend', () => {
-  console.log('Fired');
     if (carouselImages[counter].id==='lastClone'){
       carouselSlide.style.transition = "none";
       counter = carouselImages.length - 2;

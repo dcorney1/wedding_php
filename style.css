@@ -67,7 +67,7 @@ body {
 		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
-		url(images/events.png)
+		url(images/walking_wide.png)
 		;
 }
 
@@ -95,11 +95,11 @@ body {
 #faq {
 	height: 100vh;
 	background-image: linear-gradient(
-		rgba(0,  0,  0, .3),
-		rgba(0,  0,  0, .3)),
+		rgba(0,  0,  0, .1),
+		rgba(0,  0,  0, .1)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
-		url(images/faq.png)
+		url(images/on_knee_wide.png)
 		;
 }
 
@@ -243,7 +243,7 @@ nav .fa{
 .carousel-container{
 	position: relative;
 	width: 80vw;
-	height: 30vh;
+	height: 40vh;
 	margin: auto;
 	border: 5px solid black;
 	overflow: hidden;
@@ -301,18 +301,15 @@ div img {
 	/* position: relative; */
 }
 
+.map-wrapper{
+	.max-width: 500px;
+}
+
+.googlemap{
+	width: 100%;
+}
 
 @media(max-width:700px)  {
-	#faq {
-		background-image: linear-gradient(
-			rgba(0,  0,  0, .3),
-			rgba(0,  0,  0, .3)),
-			/*rgba(110 , 115 , 87, 0.5),
-			rgba(110 , 115 , 87, 0.5)),*/
-			url(images/faq_small.png)
-			;
-	}
-
 	.hero-btn{
 		padding: 10px 10px;
 	}
@@ -398,6 +395,24 @@ div img {
 	.home-divider{
 		border-top: 2px solid rgb(110 , 115 , 87);
 		visibility: hidden;
+	}
+	#travel {
+		background-image: linear-gradient(
+			rgba(0,  0,  0, .3),
+			rgba(0,  0,  0, .3)),
+			/*rgba(110 , 115 , 87, 0.5),
+			rgba(110 , 115 , 87, 0.5)),*/
+			url(images/walking_skinny.png)
+			;
+	}
+	#faq {
+		background-image: linear-gradient(
+			rgba(0,  0,  0, .0),
+			rgba(0,  0,  0, .0)),
+			/*rgba(110 , 115 , 87, 0.5),
+			rgba(110 , 115 , 87, 0.5)),*/
+			url(images/on_knee_tall.png)
+			;
 	}
 }
 
