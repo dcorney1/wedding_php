@@ -42,7 +42,7 @@
         <div class="details">
         <p class="event_location">The Ponds at Bolton Valley</p>
         <p>3233 Bolton Valley Access Rd,</p><p> Bolton, VT 05676</p>
-        <p class="event_time">Immediately Following Ceremony</p>
+        <p class="event_time">Following Ceremony</p>
           </div>
       </div>
   </div>

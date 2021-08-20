@@ -35,7 +35,7 @@
       </div>
       <div class="travel-col">
         <h2><i class="fa fa-car" aria-hidden="true"></i>  Driving  <i class="fa fa-car" aria-hidden="true"></i></h3>
-        <p>The Essex is a 3 hour and 15 minute drive from Boston, so flying into Boston Logan International Airport (BOS) is also an option.<br><br>There is free onsite parking at the Essex</p>
+        <p>The Essex is a 3 hour and 15 minute drive from Boston, so flying into Boston Logan International Airport (BOS) is also an option.<br><br>There is free onsite parking at The Essex.</p>
       </div>
   </div>
   <div class="date-header">
