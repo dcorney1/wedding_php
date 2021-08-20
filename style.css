@@ -67,7 +67,7 @@ body {
 		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
-		url(images/walking.png)
+		url(images/walking_wide.png)
 		;
 }
 
@@ -95,11 +95,11 @@ body {
 #faq {
 	height: 100vh;
 	background-image: linear-gradient(
-		rgba(0,  0,  0, .3),
-		rgba(0,  0,  0, .3)),
+		rgba(0,  0,  0, .1),
+		rgba(0,  0,  0, .1)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
-		url(images/quizzical.png)
+		url(images/on_knee_wide.png)
 		;
 }
 
@@ -238,17 +238,78 @@ nav .fa{
 }
 
 
-@media(max-width:700px)  {
-	#faq {
-		background-image: linear-gradient(
-			rgba(0,  0,  0, .3),
-			rgba(0,  0,  0, .3)),
-			/*rgba(110 , 115 , 87, 0.5),
-			rgba(110 , 115 , 87, 0.5)),*/
-			url(images/faq_small.png)
-			;
-	}
+/* picture carousel */
+/* currently always has a 500px height */
+.carousel-container{
+	position: relative;
+	width: 80vw;
+	height: 40vh;
+	margin: auto;
+	border: 5px solid black;
+	overflow: hidden;
+}
 
+.carousel-slide{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 100%;
+	/* transition: xxx; */
+}
+
+.carousel-slide div{
+	flex-shrink: 0;
+	position: relative;
+	height:100%;
+	width: 100%;
+	background-color: black;
+}
+
+div img {
+	max-height:100%;
+	/* max-width: 100%; */
+}
+
+
+#prevBtn{
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	z-index: 10;
+	left: 5%;
+	font-size: 30px;
+	color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	/* position: relative; */
+}
+
+#nextBtn{
+	position: absolute;
+	top: 50%;
+	margin-top: -15px;
+	z-index: 10;
+	right: 5%;
+	font-size: 30px;
+	color: white;
+	opacity: 0.5;
+	cursor: pointer;
+	text-align: center;
+	vertical-align: middle;
+	/* position: relative; */
+}
+
+.map-wrapper{
+	.max-width: 500px;
+}
+
+.googlemap{
+	width: 100%;
+}
+
+@media(max-width:700px)  {
 	.hero-btn{
 		padding: 10px 10px;
 	}
@@ -334,6 +395,24 @@ nav .fa{
 	.home-divider{
 		border-top: 2px solid rgb(110 , 115 , 87);
 		visibility: hidden;
+	}
+	#travel {
+		background-image: linear-gradient(
+			rgba(0,  0,  0, .3),
+			rgba(0,  0,  0, .3)),
+			/*rgba(110 , 115 , 87, 0.5),
+			rgba(110 , 115 , 87, 0.5)),*/
+			url(images/walking_skinny.png)
+			;
+	}
+	#faq {
+		background-image: linear-gradient(
+			rgba(0,  0,  0, .0),
+			rgba(0,  0,  0, .0)),
+			/*rgba(110 , 115 , 87, 0.5),
+			rgba(110 , 115 , 87, 0.5)),*/
+			url(images/on_knee_tall.png)
+			;
 	}
 }
 
