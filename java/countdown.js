@@ -1,5 +1,5 @@
 function countdown() {
-var date = new Date("August 22, 2022");
+var date = new Date("August 27, 2022");
 var now = new Date();
 var diff = date.getTime() - now.getTime();
 var daysLeft = Math.floor(diff / (1000 * 60 * 60 * 24));
