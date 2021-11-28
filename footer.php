@@ -12,7 +12,6 @@
   <!--Script for RSVP forms only -->
   <script src="java/form.js"></script>
   <script src="java/carousel.js"></script>
-  </body>
   <script src="java/accordion.js"></script>
     </body>
   </html>

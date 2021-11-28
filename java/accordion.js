@@ -1,15 +1,4 @@
-<style>
-.answer {
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
-</style>
-
-
-var acc = document.getElementsByClassName("accordion-item");
+var acc = document.getElementsByClassName("accordion-link");
 var i;
 
 for (i = 0; i < acc.length; i++) {
@@ -19,11 +8,12 @@ for (i = 0; i < acc.length; i++) {
     this.classList.toggle("active");
 
     /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    var answer = this.nextElementSibling;
+    console.log(answer)
+    if (answer.style.maxHeight) {
+      answer.style.maxHeight = null;
     } else {
-      panel.style.display = "block";
+      answer.style.maxHeight = answer.scrollHeight + "px";
     }
   });
 }
