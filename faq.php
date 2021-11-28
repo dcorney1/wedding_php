@@ -11,14 +11,14 @@
       <script src="java/countdown.js"></script>
       <script src="java/menu.js"></script>
     </section>
-  <section class="faq">
+  <section class="travel">
     <div class="container">
       <div class="accordion">
         <div class="accordion-item" id="question1">
           <a class="accordion-link">
             How often do you go to the beach?
-            <!-- <i class="fa fa-plus" aria-hidden="true"></i>
-            <i class="fa fa-minus" aria-hidden="true"></i> -->
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <i class="fa fa-minus" aria-hidden="true"></i>
           </a>
           <div class="answer">
             <p>this is a basic answer2</p>
@@ -28,8 +28,8 @@
         <div class="accordion-item" id="question2">
           <a class="accordion-link">
             How often do you go to the beach2?
-            <!-- <i class="fa fa-plus" aria-hidden="true"></i>
-            <i class="fa fa-minus" aria-hidden="true"></i> -->
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <i class="fa fa-minus" aria-hidden="true"></i>
           </a>
           <div class="answer">
             <p>this is a basic answer2</p>
@@ -39,8 +39,8 @@
         <div class="accordion-item" id="question3">
           <a class="accordion-link">
             How often do you go to the beach2?
-            <!-- <i class="fa fa-plus" aria-hidden="true"></i>
-            <i class="fa fa-minus" aria-hidden="true"></i> -->
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <i class="fa fa-minus" aria-hidden="true"></i>
           </a>
           <div class="answer">
               <p>this is a basic answer2</p>
@@ -49,16 +49,16 @@
 
       </div>
   </div>
-<div class="email">
-  <p>SEND E-MAIL</p>
-  <form class="contract-form" action="contactform.php" method="post">
-    <input type="text" name="name" placeholder=""="Full name">
-    <input type="text" name="mail" placeholder=""="Your e-mail">
-    <input type="text" name="subject" placeholder=""="Full name">
-    <textarea name="message" placeholder="Message"></textarea>
-    <button type="submit" name="submit">SEND MAIL</buttton>
-  </form>
-</div>
+  <div class="email">
+    <p>SEND E-MAIL</p>
+    <form class="contract-form" action="contactform.php" method="post">
+      <input type="text" name="name" placeholder=""="Full name">
+      <input type="text" name="mail" placeholder=""="Your e-mail">
+      <input type="text" name="subject" placeholder=""="Full name">
+      <textarea name="message" placeholder="Message"></textarea>
+      <button type="submit" name="submit">SEND MAIL</buttton>
+    </form>
+  </div>
 
   </section>
 <!-- Travel Content -->

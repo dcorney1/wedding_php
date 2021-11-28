@@ -12,7 +12,9 @@
 <!-- Travel Content -->
 <section class="travel">
   <div class="travel-container">
-
+    <div class="date-header" id="official">
+        <h1>Official Events</h1>
+    </div>
 
   <div class="date-header">
     <h1>Friday, August 26th</h1>
@@ -56,6 +58,11 @@
         <p class="event_time">Time TBD</p>
           </div>
   </div>
+    </div>
+    <div class="travel-container">
+      <div class="date-header" id="unofficials">
+          <h1>Unofficial Events</h1>
+      </div>
     </div>
 </section>
 <!-- Footer -->

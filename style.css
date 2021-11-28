@@ -82,20 +82,20 @@ body {
 		;
 }
 
-#about_us {
+#photos {
 	background-image: linear-gradient(
 		rgba(0,  0,  0, .3),
 		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
-		url(images/about_us.png)
+		url(images/photos.png)
 		;
 }
 
 #faq {
 	background-image: linear-gradient(
-		rgba(0,  0,  0, .1),
-		rgba(0,  0,  0, .1)),
+		rgba(0,  0,  0, .3),
+		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
 		url(images/on_knee_wide.png)
@@ -527,19 +527,20 @@ input.invalid {
 	padding: 0 1.5rem;
 }
 
+/* the box that contains the items */
 .accordion-item{
-	background-color: #283042;
+	background-color: rgba(170,121,130,.6);
 	border-radius: .4rem;
-	margin-bottom: 1rem;
+	margin: 1rem;
 	padding: 1rem;
-	box-shadow: .5rem 2px .5rem rgba(0,0,0,.1);
+	/* box-shadow: .5rem 2px .5rem rgba(0,0,0,.1); */
 }
-
+/* the div around the item */
 .accordion-link{
 	font-size: 1.6rem;
 	color: rgba(255,255,255,.8);
 	text-decoration: none;
-	background-color: #283042;
+	/* background-color: rgba(170,121,130,.6); */
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -552,70 +553,29 @@ input.invalid {
 	padding: .5rem;
 } */
 
-/* .accordion-link .fa-minus{
+.accordion-link .fa-minus{
 	display: none;
-} */
-.active, .accordion-link:hover {
+}
+
+/* .active, .accordion-link:hover {
 	background-color: #ccc;
-}
-
-.accordion-link:after {
-  content: '\002B';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
-
-.active:after {
-  content: '\2212';
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
-}
+} */
 
 .answer{
 	max-height: 0;
 	overflow: hidden;
 	position: relative;
-	background-color: #212838;
-	color: rgba(255,255,255,.6);
+	/* background-color: rgba(170,121,130,.6); */
+	color: rgba(255,255,255,.8);
 	font-size: 1.4rem;
 	transition: max-height 650ms;
 }
 
-/* .answer::before{
-	content: "";
-	position: absolute;
-	width: .6rem;
-	height: 90%;
-	background-color: #8fc460;
-	top: 50%;
-	left: 0;
-	transform: translateY(-50%);
-
-} */
-
 .answer p{
 	font-size: 1.4rem;
-	color: rgba(255,255,255,.6);
+	/* color: rgba(170,121,130,.6); */
 	padding: 2rem;
 }
-
-/* .accordion-item:target .answer{
-	max-height: 20rem;
-}
-
-.accordion-item:target .accordion-link .fa-plus{
-	display: none;
-}
-
-.accordion-item:target .accordion-link .fa-minus{
-	display: block;
-} */
-/* this is the end */
-
 
 @media(max-width:700px)  {
 	.hero-btn{
