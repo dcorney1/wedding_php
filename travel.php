@@ -40,8 +40,22 @@
   </div>
   <div class="date-header">
         <h1>Things to do</h1>
+        <h2>Some of our favorite activities in the area!</h2>
   </div>
-        <p>We will update with fun activities soon!</p>
+  <div class="row">
+  <div class="travel-col">
+        <h2><i class="fa fa-cutlery" aria-hidden="true"></i>  Dine  <i class="fa fa-glass" aria-hidden="true"></i></h2>
+        <h3>Burlington International Airport (BVT)</h3>
+        <p>The closest airport is Burlington International Airport (BVT). It is a 15 minute drive from The Essex. The Essex has shuttles that will transport guests to and from the airport. Call the front desk to arrange airport transportation. Uber/Lyft are also available in the area.</p>
+      </div>
+      <div class="divider">
+      </div>
+      <div class="travel-col">
+        <h2><i class="fa fa-bicycle" aria-hidden="true"></i>  Explore  <i class="fa fa-futbol-o" aria-hidden="true"></i></h3>
+        <p>The Essex is a 3 hour and 15 minute drive from Boston, so flying into Boston Logan International Airport (BOS) is also an option.<br><br>There is free onsite parking at The Essex.</p>
+      </div>
+  </div>
+        
 </div>
 </section>
 <!-- Footer -->
