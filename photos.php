@@ -9,7 +9,7 @@
     <h1>Photos</h1>
 </div>
 </section>
-<section class="travel" id="photos">
+<section class="travel" id="page_photos">
     <?php
       $directory = './carousel';
       $images = glob($directory . "/*.png");
