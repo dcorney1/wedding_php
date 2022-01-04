@@ -15,7 +15,7 @@
   <i class="fa fa-arrow-right" id="nextBtn" aria-hidden="true"></i>
   <div class="carousel-slide">
     <?php
-      $directory = './images/carousel';
+      $directory = './carousel';
       $images = glob($directory . "/*.png");
       // print_r($images);
       echo '<div id="lastClone">
