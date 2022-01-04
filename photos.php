@@ -9,29 +9,17 @@
     <h1>Photos</h1>
 </div>
 </section>
-<section class="travel">
-<div class="carousel-container">
-  <i class="fa fa-arrow-left"  id="prevBtn" aria-hidden="true"></i>
-  <i class="fa fa-arrow-right" id="nextBtn" aria-hidden="true"></i>
-  <div class="carousel-slide">
+<section class="travel" id="photos">
     <?php
       $directory = './carousel';
       $images = glob($directory . "/*.png");
       // print_r($images);
-      echo '<div id="lastClone">
-        <img src="' . end($images) . '" alt=""></div>';
+
       foreach($images as $image)
       {
-        {
-         echo '<div>
-           <img src="' . $image . '" alt=""></div>';
-       }
+        echo '<img src="' . $image . '" alt="">';
       }
-      echo '<div id="firstClone">
-        <img src="' . $images[0] . '" alt=""></div>';
     ?>
-  </div>
-</div>
 </section>
 
 
