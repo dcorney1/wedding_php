@@ -29,12 +29,12 @@ if (isset($_POST["submit"])) {
     $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
     try {
         $response = $sendgrid->send($email);
-
+        header("location: ../faq.php?message=messagesent");
+        exit();
     } catch (Exception $e) {
         echo 'Caught exception: '.  $e->getMessage(). "\n";
     }
-    header("location: ../faq.php?message=messagesent");
-    exit();
+
 }
 else {
     header("location: ../faq.php");
