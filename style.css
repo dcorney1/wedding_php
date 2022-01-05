@@ -845,3 +845,29 @@ input.invalid {
    column-count:         1;
    }
  }
+
+ .travel-col ul li {
+	list-style: none;
+	display: block;
+	position: relative;
+}
+
+.travel-col ul li a{
+	color: #000;
+	text-decoration: none;
+}
+
+/*defaulting to no effect*/
+.travel-col ul li::after {
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: rgba(110 , 115 , 87, 1);
+	/* display: block; */
+	margin: auto;
+	transition:0.5s;
+}
+/*hover effect*/
+.travel-col ul li:hover::after{
+	width:100%;
+}
