@@ -14,11 +14,11 @@ include_once 'nav.php';
   <div class="travel-container">
     <div class="date-header">
         <h1>Thursday, August 25th</h1>
-        <h2>Beer Tour</h2>
+        <h2>Brewery Night</h2>
         <div class="details">
-        <p class="event_location">Foam Brewery</p>
-        <p>112 Lake St,</p><p> Burlington, VT 05401</p>
-        <p class="event_time">Time TBD</p>
+        <p class="event_location">Burlington Beer Company</p>
+        <p>180 Flynn Ave,</p><p> Burlington, VT 05401</p>
+        <p class="event_time">6-8 PM</p>
           </div>
   </div>
   <div class="date-header">
@@ -27,8 +27,8 @@ include_once 'nav.php';
     <div class="travel-col">
         <h2>Golf Outing</h2>
       <div class="details">
-        <p class="event_location">TBD</p>
-        <p>TBD,</p><p> TBD</p>
+        <p class="event_location">The Links at Lang Farm</p>
+        <p>39 Essex Way,</p><p> Essex Junction, VT 05452</p>
         <p class="event_time">Morning</p>
       </div>
     </div>
