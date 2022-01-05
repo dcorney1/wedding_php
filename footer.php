@@ -5,9 +5,9 @@
     <i class="fa fa-facebook"></i>
     <i class="fa fa-instagram"></i>
   </div> -->
-  <!-- <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button> -->
+  <!--  -->
   <p>Made with <i class="fa fa-heart-o"></i> by M&D  </p>
-  <a id="myLink" title="Click to do something" href="#" onclick="topFunction();return false;">TOP</a>
+  </section>
   <script src="java/menu.js"></script>
   <!--JavaScript to give countdown until August 27 2022-->
   <script src="java/countdown.js"></script>
@@ -19,10 +19,10 @@
   <script>var mybutton = document.getElementById("topBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
+
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  print('hello');
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     mybutton.style.display = "block";
   } else {
@@ -32,6 +32,7 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
+  console.log('hello');
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 
@@ -41,6 +42,6 @@ function topFunction() {
   window.scrollTo({ top: 0, behavior: 'smooth' })}</script>
 
 
-</section>
+
 </body>
   </html>

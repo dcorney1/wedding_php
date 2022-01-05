@@ -1,6 +1,7 @@
 <?php
   include_once 'header.php'
 ?>
+
 <section class="sub-header" id="photos">
   <?php
     include_once 'nav.php'
@@ -10,6 +11,7 @@
 </div>
 </section>
 <section class="travel" id="page_photos">
+
     <?php
       $directory = './carousel';
       $images = glob($directory . "/*.png");

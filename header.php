@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body onload="countdown()">
+<button onclick="topFunction()" id="topBtn" title="Go to top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button>
 
 
 
