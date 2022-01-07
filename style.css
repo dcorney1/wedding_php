@@ -497,7 +497,7 @@ div img {
 /* Style the input fields */
 input {
   padding: 10px;
-  width: 100%;
+  /* width: 100%; */
   font-size: 17px;
   font-family: Raleway;
   border: 1px solid #aaaaaa;
@@ -778,65 +778,7 @@ input.invalid {
 	width: 280px;
   }
   
-  /* The popup form - hidden by default */
-  .form-popup {
-	display: none;
-	position: fixed;
-	bottom: 0;
-	top: 25%;
-	left: 50%;
-	transform: translate(-50%, -25%);
-	/* border: 3px solid #f1f1f1; */
-	z-index: 9;
-  }
-  
-  /* Add styles to the form container */
-  .form-container {
-	max-width: 300px;
-	height: inherit;
-	padding: 10px;
-	background-color: white;
-  }
-  
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
-	width: 80%;
-	padding: 15px;
-	margin: 5px 0 22px 0;
-	border: none;
-	background: #f1f1f1;
-  }
-  
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-	background-color: #ddd;
-	outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .form-container .btn {
-	background-color: #04AA6D;
-	color: white;
-	padding: 16px 20px;
-	border: none;
-	cursor: pointer;
-	width: 80%;
-	margin-bottom:10px;
-	opacity: 0.8;
-  }
-  
-  /* Add a red background color to the cancel button */
-  .form-container .cancel {
-	background-color: red;
-  }
-  
-  /* Add some hover effects to buttons */
-  .form-container .btn:hover, .open-button:hover {
-	opacity: 1;
-  }
-
-
-  #topBtn {
+ #topBtn {
 	display: none;
 	position: fixed;
 	bottom: 20px;
@@ -934,3 +876,285 @@ input.invalid {
 .travel-col ul li:hover::after{
 	width:100%;
 }
+
+
+
+ /* The popup form - hidden by default */
+ .form-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -25%);
+	/* border: 3px solid #f1f1f1; */
+	z-index: 9;
+	height: fit-content;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+	background: #F2F3EB;
+	max-width: 600px;
+	height: inherit;
+	padding: 10px;
+	background-color: white;
+
+  }
+  
+  /* Full-width input fields */
+  .form-container input[type=text], .form-container input[type=password] {
+	width: 80%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+	background-color: #04AA6D;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 80%;
+	margin-bottom:10px;
+	opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+	background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+	opacity: 1;
+  }
+
+
+
+
+
+#myForm {
+	background: #F2F3EB;
+}
+  
+#myForm button {
+  overflow: visible;
+}
+
+#myForm button, select {
+  text-transform: none;
+}
+
+#myForm button, input, select, textarea {
+  color: #5A5A5A;
+  font: inherit;
+  margin: 0;
+}
+
+#myForm input {
+  line-height: normal;
+}
+
+#myForm textarea {
+  overflow: auto;
+}
+
+#myForm #contact_form {
+  border: solid 3px #474544;
+  max-width: 768px;
+  position: relative;
+}
+
+#myForm form {
+  padding: 37.5px;
+}
+
+#myForm h1 {
+  color: #474544;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 7px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#myForm .underline {
+  border-bottom: solid 2px #474544;
+  margin: -0.512em auto;
+  width: 80px;
+}
+
+#myForm .icon_wrapper {
+  margin: 50px auto 0;
+  width: 100%;
+}
+
+#myForm .icon {
+  display: block;
+  fill: #474544;
+  height: 50px;
+  margin: 0 auto;
+  width: 50px;
+}
+
+#myForm .email {
+	float: right;
+	width: 45%;
+}
+
+#myForm input[type='text'], [type='email'], select, textarea {
+	background: none;
+  border: none;
+	border-bottom: solid 2px #474544;
+	color: #474544;
+	font-size: 1.000em;
+  font-weight: 400;
+  letter-spacing: 1px;
+	margin: 0em 0 1.875em 0;
+	padding: 0 0 0.875em 0;
+  text-transform: uppercase;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+#myForm input[type='text']:focus, [type='email']:focus, textarea:focus {
+	outline: none;
+	padding: 0 0 0.875em 0;
+}
+
+#myForm .message {
+	float: none;
+}
+
+#myForm .name {
+	float: left;
+	width: 45%;
+}
+
+#myForm select {
+  background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+#myForm select::-ms-expand {
+  display: none;
+}
+
+#myForm .subject {
+  width: 100%;
+}
+
+/* #myForm .telephone {
+  width: 100%;
+} */
+
+#myForm textarea {
+	line-height: 150%;
+	height: 150px;
+	resize: none;
+  width: 100%;
+}
+
+::-webkit-input-placeholder {
+	color: #474544;
+}
+
+:-moz-placeholder { 
+	color: #474544;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: #474544;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	color: #474544;
+}
+
+#myForm #form_button {
+  background: none;
+  border: solid 2px #474544;
+  color: #474544;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 0.875em;
+  font-weight: bold;
+  outline: none;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	width:125px;
+}
+
+#myForm #form_button:hover {
+	background: #474544;
+	color: #F2F3EB;
+  }
+
+  @media screen and (max-width: 768px) {
+	#myForm #container {
+	  margin: 20px auto;
+	  width: 95%;
+	}
+  }
+  
+  @media screen and (max-width: 480px) {
+	#myForm h1 {
+	  font-size: 26px;
+	}
+	
+	#myForm .underline {
+	  width: 68px;
+	}
+	
+	#myForm #form_button {
+	  padding: 15px 25px;
+	}
+  }
+  
+  @media screen and (max-width: 420px) {
+	#myForm h1 {
+	  font-size: 18px;
+	}
+	
+	#myForm .icon {
+	  height: 35px;
+	  width: 35px;
+	}
+	
+	#myForm .underline {
+	  width: 53px;
+	}
+	
+	#myForm input[type='text'], [type='email'], select, textarea {
+	  font-size: 0.875em;
+	}
+  }

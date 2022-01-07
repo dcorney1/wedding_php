@@ -7,13 +7,13 @@ if (isset($_POST["submit"])) {
     $name = $_POST["name"];
     if (empty($_POST["email"])) {
         $emailErr = "Email is required";
-        header("location: ../faq.php?");
+        header("location: ../faq.php?message=whattheheckprovideanemail");
         exit();
       } else {
         // check if e-mail address is well-formed
         if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
           $emailErr = "Invalid email format";
-          header("location: ../faq.php?");
+          header("location: ../faq.php?message=omgcanyouspell");
           exit();
         }
       }
@@ -37,7 +37,7 @@ if (isset($_POST["submit"])) {
 
 }
 else {
-    header("location: ../faq.php");
+    header("location: ../faq.php?message=submitfailed");
     exit();
 }
 
