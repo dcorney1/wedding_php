@@ -44,7 +44,7 @@ if (isset($_SESSION["person_id"])) {
         <div class="details">
           <p class="event_location">Backyard at The Essex</p>
           <p>70 Essex Way,</p><p> Essex Junction, VT 05452</p>
-          <p class="event_time">Evening, Exact Time TBD</p>
+          <p class="event_time">6 to 9 PM</p>
         </div>
       </div>
 
@@ -78,7 +78,7 @@ if (isset($_SESSION["person_id"])) {
         <div class="details">
         <p class="event_location">Backyard at the Essex</p>
         <p>70 Essex Way,</p><p> Essex Junction, VT 05452</p>
-        <p class="event_time">Time TBD</p>
+        <p class="event_time">9 to 11 AM</p>
           </div>
   </div>
     </div>
