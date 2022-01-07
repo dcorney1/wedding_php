@@ -20,7 +20,8 @@
       }
     }
     echo "<div class=\"container\">";
-    print_r($arr);
+    $arr = json_decode(file_get_contents("./faqs.json"), true);
+  
 
     foreach($arr as $item) {
       echo "<div class=\"accordion\">

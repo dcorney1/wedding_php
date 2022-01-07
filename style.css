@@ -891,8 +891,16 @@ input.invalid {
 	z-index: 9;
 	height: fit-content;
 	max-height: 100%;
-	overflow: scroll;
-  }
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  	scrollbar-width: none; /* for Firefox */
+  	overflow-y: scroll; 
+}
+
+
+.form-popup::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
   
   /* Add styles to the form container */
   .form-container {
