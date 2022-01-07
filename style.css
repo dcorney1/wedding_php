@@ -890,6 +890,8 @@ input.invalid {
 	/* border: 3px solid #f1f1f1; */
 	z-index: 9;
 	height: fit-content;
+	max-height: 100%;
+	overflow: scroll;
   }
   
   /* Add styles to the form container */
