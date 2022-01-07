@@ -2,17 +2,23 @@
   <!-- <a href="index.php" id="top"><img src="images/logo.png"></a> -->
   <div class="nav-links" id="navLinks">
     <i class="fa fa-times" onclick="hideMenu()"></i>
-    <ul>
-      <!-- <li><a href="index.php">Home</a></li> -->
-      <li><a href="travel.php">Travel</a></li>
-      <li><a href="events.php">Events</a></li>
-      <li><a href="photos.php">Photos</a></li>
+    <div class="list">
+      <!-- <div class="list_item"><a href="index.php">Home</a></div> -->
+      <div class="column1">
+      <div class="list_item"><a href="travel.php">Travel</a></div>
+      <div class="list_item"><a href="events.php">Events</a></div>
+      <div class="list_item"><a href="photos.php">Photos</a></div>
+      </div>
       <!-- <br id="menu_photo">Home -->
-      <li id="menu_photo"><a href="index.php" id="top"><img src="images/logo.png"></a></li>
-      <li><a href="faq.php">FAQ</a></li>
-      <li><a href="registry.php">Registry</a></li>
-      <li><a href="rsvp.php">RSVP</a></li>
-    </ul>
+      <div class="column2" id="menu_photo">
+      <div class="list_item"><a href="index.php" id="top"><img src="images/logo.png"></a></div>
+      </div>
+      <div class="column3">
+      <div class="list_item"><a href="faq.php">FAQ</a></div>
+      <div class="list_item"><a href="registry.php">Registry</a></div>
+      <div class="list_item"><a href="rsvp.php">RSVP</a></div>
+      </div>
+</div>
   </div>
   <i class="fa fa-bars" onclick="showMenu()"></i>
 </nav>

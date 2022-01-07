@@ -11,16 +11,21 @@ include_once 'nav.php';
 </section>
 <!-- Travel Content -->
 <section class="travel">
-  <div class="travel-container">
-    <div class="date-header">
-        <h1>Thursday, August 25th</h1>
-        <h2>Brewery Night</h2>
-        <div class="details">
-        <p class="event_location">Burlington Beer Company</p>
-        <p>180 Flynn Ave,</p><p> Burlington, VT 05401</p>
-        <p class="event_time">6-8 PM</p>
-          </div>
-  </div>
+<?php
+if (isset($_SESSION["person_id"])) {
+          echo "  <div class=\"travel-container\">
+          <div class=\"date-header\">
+              <h1>Thursday, August 25th</h1>
+              <h2>Brewery Night</h2>
+              <div class=\"details\">
+              <p class=\"event_location\">Burlington Beer Company</p>
+              <p>180 Flynn Ave,</p><p> Burlington, VT 05401</p>
+              <p class=\"event_time\">6-8 PM</p>
+                </div>
+        </div>";
+        }
+        ?>
+
   <div class="date-header">
     <h1>Friday, August 26th</h1>
     <div class="row">

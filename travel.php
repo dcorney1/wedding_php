@@ -80,6 +80,7 @@
   </div>
   </div>
   <h2>Find more suggestions on our interactive map!</h2>
+  <a href="https://www.google.com/maps/d/u/0/edit?mid=14Hb9OMDu9bx9n0cyL3V7rPkOy2Wp6Cx0&usp=sharing" target="_blank">test</a>
         
 </div>
 </section>

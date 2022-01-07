@@ -128,7 +128,7 @@
   </div>
   <div class="form-popup" id="myForm">
     <form class="form-container" action="includes/contactform.inc.php" method="post">
-      <h1>Login</h1>
+      <h3>Send us an E-mail</h3>
       <input type="text" name="name" placeholder="Full name">
       <input type="text" name="email" placeholder="Your e-mail">
       <input type="text" name="subject" placeholder="Subject">
