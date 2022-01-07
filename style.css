@@ -1119,10 +1119,20 @@ input.invalid {
 	color: #F2F3EB;
   }
 
+  @media screen and (max-width: 1000px) {
+	#myForm button, input, select, textarea {
+		margin: 2px;
+	}
+  }
+
   @media screen and (max-width: 768px) {
 	#myForm #container {
 	  margin: 20px auto;
 	  width: 95%;
+	}
+
+	#myForm input[type='text'], [type='email'], select, textarea {
+		font-size: .7em;
 	}
   }
   
