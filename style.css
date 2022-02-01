@@ -409,7 +409,7 @@ div img {
 	margin: 0 10%;
 	margin: auto;
 	padding-top: 15px;
-	padding-bottom: 50px;
+	padding-bottom: 15px;
 	text-align: center;
 	background-color: rgba(110, 115, 87, .15);
 }
@@ -776,6 +776,7 @@ input.invalid {
 	cursor: pointer;
 	opacity: 0.8;
 	width: 280px;
+	max-width: 80%;
   }
   
  #topBtn {
