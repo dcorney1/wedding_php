@@ -57,7 +57,7 @@ body {
 	position: relative;
 }
 
-.header nav, .header .text-box {
+.header .text-box, .header .list_item {
 	animation: fadeIn 3s;
 	-webkit-animation: fadeIn 3s;
 	-moz-animation: fadeIn 3s;
@@ -105,6 +105,12 @@ body {
 		position: relative;
 }
 
+.filler {
+	min-height: calc(calc(45% - 20px));
+	width: 100%;
+	background-color: rgba(110, 115, 87, .15);
+}
+
 #travel {
 	background-image: linear-gradient(
 		rgba(0,  0,  0, .3),
@@ -147,7 +153,19 @@ body {
 
 
 .footer{
+	min-height: 5%;
 	background-color: rgba(110, 115, 87, .15);
+	width: 100%;
+	text-align: center;
+	
+	padding: 10px 0;
+}
+
+.footer p{
+	margin-bottom: 2.5%;
+	margin-top: 2.5%;
+	font-weight: 600;
+	vertical-align: middle;
 }
 
 
@@ -194,6 +212,10 @@ nav img{
 	padding: 8px 10px;
 	position: relative;
 	vertical-align: middle;
+}
+
+div.list_item.home {
+	display: none;
 }
 
 .nav-links .list_item a{
@@ -376,17 +398,7 @@ div img {
 
 /*--stuff if we want another section--*/
 /*Footer*/
-.footer{
-	width: 100%;
-	text-align: center;
-	padding: 10px 0;
-}
 
-.footer h4{
-	margin-bottom: 2.5%;
-	margin-top: 2.5%;
-	font-weight: 600;
-}
 
 .icons .fa{
 	color: #f44336;
@@ -697,9 +709,17 @@ input.invalid {
 	.nav-links .list_item {
 		padding-right: 30px;
 	}
+
+	
+	div.list_item.home {
+		display: block;
+	}
+
 	#menu_photo{
 		display: none;
 	}
+	
+
 
 	.nav-links .column1, .nav-links .column3 {
 		display: block;

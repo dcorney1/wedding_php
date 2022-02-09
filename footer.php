@@ -32,16 +32,8 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  console.log('hello');
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
-
-  
-  
-  
   window.scrollTo({ top: 0, behavior: 'smooth' })}</script>
-
-
-
 </body>
   </html>

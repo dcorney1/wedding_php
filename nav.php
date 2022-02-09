@@ -5,6 +5,7 @@
     <div class="list">
       <!-- <div class="list_item"><a href="index.php">Home</a></div> -->
       <div class="column1">
+      <div class="list_item home"><a href="index.php">Home</a></div>
       <div class="list_item"><a href="travel.php">Travel</a></div>
       <div class="list_item"><a href="events.php">Events</a></div>
       <div class="list_item"><a href="photos.php">Photos</a></div>

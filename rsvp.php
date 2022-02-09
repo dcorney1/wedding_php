@@ -5,12 +5,16 @@
   <?php
     include_once 'nav.php'
   ?>
-  <h2>RSVP</h2>
+  <div class="text-box">
+    <h1>RSVP</h1>
+</div>
+</section>
+<section class="filler">
 </section>
 <section>
   <div class="">
-
-    <?php
+    <!-- Commenting Out RSVP -->
+    <!-- <?php
      if (isset($_GET['rsvp'])) {
        if ($_GET['rsvp'] == "complete") {
          foreach ($_SESSION["rsvp_status"] as $event){
@@ -97,12 +101,6 @@
 
 
     ?>
-    <!-- <input type="text" name="name" placeholder="Full name..."> -->
-    <!-- <input type="text" name="zip" placeholder="Zip Code...">
-    <input type="text" name="email" placeholder="Email..."> -->
-    <!-- <button type="submit" name="submit">RSVP</button> -->
-
-
   <?php
     if (isset($_GET["error"])) {
       if ($_GET["error"] == "emptyinput") {
@@ -115,7 +113,7 @@
             echo "<p>An unknown error occurred, please try again</p>";
           }
     }
-   ?>
+   ?> -->
 </div>
 </section>
 
