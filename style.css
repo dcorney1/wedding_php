@@ -595,16 +595,17 @@ input.invalid {
 
 /* the box that contains the items */
 .accordion-item{
-	background-color: rgba(170,121,130,.6);
+	background-color: rgba(110,115,87,.8);;
 	border-radius: .4rem;
 	margin: 1rem;
 	padding: 1rem;
+	text-align: left;
 	/* box-shadow: .5rem 2px .5rem rgba(0,0,0,.1); */
 }
 /* the div around the item */
 .accordion-link{
-	font-size: 1.6rem;
-	color: rgba(255,255,255,.8);
+	font-size: 1.2rem;
+	color: rgba(255,255,255,1);
 	text-decoration: none;
 	/* background-color: rgba(170,121,130,.6); */
 	width: 100%;
@@ -631,16 +632,19 @@ input.invalid {
 	max-height: 0;
 	overflow: hidden;
 	position: relative;
-	/* background-color: rgba(170,121,130,.6); */
+	background-color: rgba(110,115,87,-.4);; 
 	color: rgba(255,255,255,.8);
-	font-size: 1.4rem;
+	font-size: 1rem;
 	transition: max-height 650ms;
 }
 
 .answer p{
-	font-size: 1.4rem;
+	font-size: 1rem;
 	/* color: rgba(170,121,130,.6); */
-	padding: 2rem;
+}
+
+#pnlRegistryWelcome {
+	display: none;
 }
 
 @media(max-width:700px)  {

@@ -3,7 +3,7 @@ function openForm() {
     document.body.style.overflowY = 'hidden';
   }
   
-  function closeForm() {
+function closeForm() {
     document.getElementById("myForm").style.display = "none";
     document.body.style.overflowY = 'scroll';
   }

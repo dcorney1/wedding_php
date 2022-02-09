@@ -29,7 +29,8 @@ if (isset($_SESSION["person_id"])) {
   <div class="date-header">
     <h1>Friday, August 26th</h1>
     <div class="row">
-    <div class="travel-col">
+      <!-- Commenting out Golf Outing for Now -->
+    <!-- <div class="travel-col">
         <h2>Golf Outing</h2>
       <div class="details">
         <p class="event_location">The Links at Lang Farm</p>
@@ -38,7 +39,7 @@ if (isset($_SESSION["person_id"])) {
       </div>
     </div>
       <div class="divider">
-        </div>
+        </div> -->
         <div class="travel-col">
         <h2>Welcome Dinner</h2>
         <div class="details">

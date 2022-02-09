@@ -12,7 +12,6 @@
       <script src="java/menu.js"></script>
     </section>
   <section class="travel">
-  <button class="open-button" onclick="openForm()">Question? Click here to email us!</button>
   <?php
     if (isset($_GET["message"])) {
       if ($_GET["message"] == "messagesent") {
@@ -37,6 +36,7 @@
     }
     echo "<div>";
   ?>
+  <button class="open-button" onclick="openForm()">Question? Click here to email us!</button>
   <div class="form-popup" id="myForm">
   <h1>Ask Us!</h1>
   <div class="underline">

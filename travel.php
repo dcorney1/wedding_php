@@ -50,7 +50,7 @@
         <h3>Eat</h3>
         <ul>
           <li><a href="http://henofthewood.com/" target="_blank">Hen of the Wood</a></li>
-          <li><a href="https://www.farmhousetg.com/" target="_blank">The Farmhouse Tap and Gril</a></li>
+          <li><a href="https://www.farmhousetg.com/" target="_blank">The Farmhouse Tap and Grill</a></li>
           <li><a href="http://www.burlingtonwhiskeyroom.com/" target="_blank">The Whiskey Room</a></li>
         </ul>
         <h3>Drink</h3>
@@ -79,9 +79,10 @@
       </div>
   </div>
   </div>
-  <h2>Find more suggestions on our interactive map!</h2>
+  <!-- commenting out the map for now -->
+  <!-- <h2>Find more suggestions on our interactive map!</h2>
   <a href="https://www.google.com/maps/d/u/0/edit?mid=14Hb9OMDu9bx9n0cyL3V7rPkOy2Wp6Cx0&usp=sharing" target="_blank">test</a>
-        
+         -->
 </div>
 </section>
 <!-- Footer -->
