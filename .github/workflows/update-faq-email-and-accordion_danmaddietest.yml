@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'danmaddietest'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A8DDC7D352E941C29DD984AF4DD32EF2 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C9B24BF00B714A049FCC6CBFFEA171E0 }}
           package: .
