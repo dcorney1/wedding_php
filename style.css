@@ -865,7 +865,7 @@ input.invalid {
   }
   
   /* // Smaller screens in portrait */
-  
+  /**/
   @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
 	#page_photos ul {
 	  flex-direction: row;
