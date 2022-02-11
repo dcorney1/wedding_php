@@ -11,7 +11,7 @@
 </div>
 </section>
 <section class="travel" id="page_photos">
-
+    <ul>
     <?php
       $directory = './carousel';
       $images = glob($directory . "/*.jpg");
@@ -19,9 +19,10 @@
 
       foreach($images as $image)
       {
-        echo '<img src="' . $image . '" alt="">';
+        echo '<li><img src="' . $image . '" alt="" loading="lazy"></li>';
       }
     ?>
+    </ul>
 </section>
 
 
