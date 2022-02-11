@@ -823,64 +823,53 @@ input.invalid {
 	color: black;
   }
 
-  #page_photos ul {
-	display: flex;
-	flex-wrap: wrap;
-	list-style-type: none;
-  }
-  
-  #page_photos li {
-	height: 40vh;
-	flex-grow: 1;
-  }
-  
-  #page_photos li:last-child {
-	/* // There's no science in using "10" here. In all my testing, this delivered the best results. */
-	flex-grow: 10;
-  }
-  
-  #page_photos img {
-	max-height: 100%;
-	min-width: 100%;
-	object-fit: cover;
-	vertical-align: bottom;
-  }
-  
-  /* // ADVANCED */
-  
-  /* // Portrait */
-  
-  @media (max-aspect-ratio: 1/1) {
-	#page_photos li {
-	  height: 30vh;
-	}
-  }
-  
-  /* // Short screens */
-  
-  @media (max-height: 480px) {
-	#page_photos li {
-	  height: 80vh;
-	}
-  }
-  
-  /* // Smaller screens in portrait */
-  /**/
-  @media (max-aspect-ratio: 1/1) and (max-width: 480px) {
-	#page_photos ul {
-	  flex-direction: row;
-	}
-  
-	#page_photos li {
-	  height: auto;
-	  width: 100%;
-	}
-	#page_photos img {
-	  width: 100%;
-	  max-height: 75vh;
-	  min-width: 0;
-	}
-  }
+
+  #page_photos {
+	/* Prevent vertical gaps */
+	line-height: 0;
+	/* display: flex; */
+	-webkit-column-count: 5;
+	-webkit-column-gap:   0px;
+	-moz-column-count:    5;
+	-moz-column-gap:      0px;
+	column-count:         ;
+	column-gap:           0px;
+ }
+ 
+ #page_photos img {
+   /* Just in case there are inline attributes */
+   width: 100% !important;
+   height: auto !important;
+ }
+ 
+ @media (max-width: 1200px) {
+   #page_photos {
+   -moz-column-count:    4;
+   -webkit-column-count: 4;
+   column-count:         3;
+   }
+ }
+ @media (max-width: 1000px) {
+   #page_photos {
+   -moz-column-count:    3;
+   -webkit-column-count: 3;
+   column-count:         3;
+   }
+ }
+ @media (max-width: 800px) {
+   #page_photos {
+   -moz-column-count:    2;
+   -webkit-column-count: 2;
+   column-count:         2;
+   }
+ }
+ @media (max-width: 400px) {
+   #page_photos {
+   -moz-column-count:    1;
+   -webkit-column-count: 1;
+   column-count:         1;
+   }
+ }
 
  .travel-col ul li {
 	list-style: none;
