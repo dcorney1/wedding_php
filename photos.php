@@ -14,7 +14,7 @@
 
     <?php
       $directory = './carousel';
-      $images = glob($directory . "/*.png");
+      $images = glob($directory . "/*.jpg");
       // print_r($images);
 
       foreach($images as $image)
