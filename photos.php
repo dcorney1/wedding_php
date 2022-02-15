@@ -19,7 +19,7 @@
 
       foreach($images as $image)
       {
-        echo '<li><img src="' . $image . '" alt="" loading="lazy"></li>';
+        echo '<img src="' . $image . '" alt="" loading="lazy">';
       }
     ?>
     </ul>
