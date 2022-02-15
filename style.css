@@ -151,6 +151,26 @@ body {
 		;
 }
 
+#registry {
+	background-image: linear-gradient(
+		rgba(0,  0,  0, .3),
+		rgba(0,  0,  0, .3)),
+		/*rgba(110 , 115 , 87, 0.5),
+		rgba(110 , 115 , 87, 0.5)),*/
+		url(images/20181001_142350.jpg)
+		;
+}
+
+#rsvp {
+	background-image: linear-gradient(
+		rgba(0,  0,  0, .3),
+		rgba(0,  0,  0, .3)),
+		/*rgba(110 , 115 , 87, 0.5),
+		rgba(110 , 115 , 87, 0.5)),*/
+		url(images/on_knee_wide.png)
+		;
+}
+
 
 .footer{
 	min-height: 5%;
@@ -786,6 +806,15 @@ input.invalid {
 			/*rgba(110 , 115 , 87, 0.5),
 			rgba(110 , 115 , 87, 0.5)),*/
 			url(images/on_knee_tall.png)
+			;
+	}
+	#photos {
+		background-image: linear-gradient(
+			rgba(0,  0,  0, .3),
+			rgba(3, 3, 3, 0.3)),
+			/*rgba(110 , 115 , 87, 0.5),
+			rgba(110 , 115 , 87, 0.5)),*/
+			url(images/photos_small.png)
 			;
 	}
 }

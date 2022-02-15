@@ -1,7 +1,7 @@
 <?php
   include_once 'header.php'
 ?>
-<section class="sub-header">
+<section class="sub-header" id="registry">
   <?php
     include_once 'nav.php'
   ?>
