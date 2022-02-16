@@ -157,7 +157,7 @@ body {
 		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
-		url(images/PXL_20211108_231146604.png)
+		url(images/registry_wide.png)
 		; 
 }
 
@@ -167,7 +167,7 @@ body {
 		rgba(0,  0,  0, .3)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
-		url(images/on_knee_wide.png)
+		url(images/rsvp_wide.png)
 		;
 }
 
@@ -823,7 +823,16 @@ input.invalid {
 			rgba(0,  0,  0, .3)),
 			/*rgba(110 , 115 , 87, 0.5),
 			rgba(110 , 115 , 87, 0.5)),*/
-			url(images/PXL_20211108_231146604_skinny.jpg)
+			url(images/registry_tall.png)
+			;
+	}
+	#rsvp {
+		background-image: linear-gradient(
+			rgba(0,  0,  0, .3),
+			rgba(0,  0,  0, .3)),
+			/*rgba(110 , 115 , 87, 0.5),
+			rgba(110 , 115 , 87, 0.5)),*/
+			url(images/rsvp_tall.png)
 			;
 	}
 }
