@@ -1,14 +1,31 @@
 <?php
   include_once 'header.php'
 ?>
-<section class="sub-header">
+
+<section class="sub-header" id="photos">
   <?php
     include_once 'nav.php'
   ?>
-  <h1>Coming Soon</h1>
+<div class="text-box">
+    <h1>Photos</h1>
+</div>
 </section>
-<!-- Travel Content -->
-<!-- Footer -->
+<section class="travel" id="page_photos">
+    <ul>
+    <?php
+      $directory = './carousel';
+      $images = glob($directory . "/*.jpg");
+      // print_r($images);
+
+      foreach($images as $image)
+      {
+        echo '<img src="' . $image . '" alt="" loading="lazy">';
+      }
+    ?>
+    </ul>
+</section>
+
+
 <?php
   include_once 'footer.php'
 ?>

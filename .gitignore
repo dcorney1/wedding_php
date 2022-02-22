@@ -1,0 +1,4 @@
+images/
+carousel/
+db/wedding.sqlite
+.github/workflows/check-deployment_danmaddietest.yml
