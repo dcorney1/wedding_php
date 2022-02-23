@@ -77,7 +77,7 @@ if (isset($_SESSION["person_id"])) {
         <h1>Sunday, August 28th</h1>
         <h2>Farewell Brunch</h2>
         <div class="details">
-        <p class="event_location">Backyard at the Essex</p>
+        <p class="event_location">The Garden Terrace</p>
         <p>70 Essex Way,</p><p> Essex Junction, VT 05452</p>
         <p class="event_time">9 to 11 AM</p>
           </div>
