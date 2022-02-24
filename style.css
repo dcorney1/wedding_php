@@ -109,7 +109,23 @@ body {
 	min-height: calc(calc(45% - 20px));
 	width: 100%;
 	background-color: rgba(110, 115, 87, .15);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
+.filler h1 {
+	font-size: 30px;
+	text-align: center;
+	padding: 20px;
+}
+
+.filler h2 {
+	font-size: 20px;
+	text-align: center;
+	padding: 5px;
+}
+
 
 #travel {
 	background-image: linear-gradient(
