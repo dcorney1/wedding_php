@@ -33,8 +33,6 @@
           echo "
           <form action=\"includes/rsvp.inc.php\" method=\"post\">
           <input type=\"text\" name=\"name\" placeholder=\"Full name...\">
-          <!-- <input type=\"text\" name=\"zip\" placeholder=\"Zip Code...\">
-          <input type=\"text\" name=\"email\" placeholder=\"Email...\"> -->
           <button type=\"submit\" name=\"submit\">RSVP</button>
           </form>";
         }
