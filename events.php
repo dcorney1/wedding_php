@@ -41,7 +41,7 @@ if (isset($_SESSION["person_id"])) {
       <div class="divider">
         </div> -->
         <div class="travel-col">
-        <h2>Welcome Dinner</h2>
+        <h2>Welcome B.B.Q.</h2>
         <div class="details">
           <p class="event_location">Backyard at The Essex</p>
           <p>70 Essex Way,</p><p> Essex Junction, VT 05452</p>
