@@ -169,8 +169,8 @@ body {
 
 #registry {
 	background-image: linear-gradient(
-		rgba(0,  0,  0, .3),
-		rgba(0,  0,  0, .3)),
+		rgba(0,  0,  0, .1),
+		rgba(0,  0,  0, .1)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
 		url(images/registry_wide.png)
@@ -179,8 +179,8 @@ body {
 
 #rsvp {
 	background-image: linear-gradient(
-		rgba(0,  0,  0, .3),
-		rgba(0,  0,  0, .3)),
+		rgba(0,  0,  0, .1),
+		rgba(0,  0,  0, .1)),
 		/*rgba(110 , 115 , 87, 0.5),
 		rgba(110 , 115 , 87, 0.5)),*/
 		url(images/rsvp_wide.png)
@@ -293,6 +293,18 @@ div.list_item.home {
 	left: 50%;
 	transform: translate(-50%,-50%);
 	text-align: center;
+	opacity: 0.0;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+
+
+.sub-header:hover .text-box{
+	opacity: 1.0; 
 }
 
 .text-box h1{
@@ -708,6 +720,10 @@ input.invalid {
 		top: 50%;
 	}
 
+	.sub-header .text-box{
+		opacity: 1.0;
+	}
+
 	.text-box p {
     /* margin: 10px 0 40px; */
     font-size: 20px;
@@ -835,8 +851,8 @@ input.invalid {
 	}
 	#registry {
 		background-image: linear-gradient(
-			rgba(0,  0,  0, .3),
-			rgba(0,  0,  0, .3)),
+			rgba(0,  0,  0, .1),
+			rgba(0,  0,  0, .1)),
 			/*rgba(110 , 115 , 87, 0.5),
 			rgba(110 , 115 , 87, 0.5)),*/
 			url(images/registry_tall.png)
@@ -844,8 +860,8 @@ input.invalid {
 	}
 	#rsvp {
 		background-image: linear-gradient(
-			rgba(0,  0,  0, .3),
-			rgba(0,  0,  0, .3)),
+			rgba(0,  0,  0, .1),
+			rgba(0,  0,  0, .1)),
 			/*rgba(110 , 115 , 87, 0.5),
 			rgba(110 , 115 , 87, 0.5)),*/
 			url(images/rsvp_tall.png)
