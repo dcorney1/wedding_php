@@ -3,17 +3,25 @@
 
 
 if (isset($_POST["submit"])) {
-  $name = $_POST["name"];
-
   require_once 'dbh.inc.php';
   require_once 'functions.inc.php';
-
-  if (emptyInputLogin($name) !== false) {
-     header("location: ../rsvp.php?error=emptyinput");
-     exit();
+  if (array_key_exists("family", $_POST)){
+    $family = $_POST["family"];
+    loginFamily($dbh, $family);
+    exit();
+  }
+  
+  if (array_key_exists("name", $_POST)){
+    
+    $name = $_POST["name"];
+    if (emptyInputLogin($name) !== false) {
+      header("location: ../rsvp.php?error=emptyinput");
+      exit();
+   }
+   
+   loginUser($dbh, $name);
   }
 
-  loginUser($dbh, $name);
 }
 else if (isset($_POST["rsvpForm"])) {
   $updates = $_POST;

@@ -1,15 +1,36 @@
 <?php
   function uidExists($dbh, $name) {
-    $sql = "SELECT * FROM guests WHERE first_name || ' ' || last_name = ?;";
+    $sql = "SELECT * FROM guests WHERE last_name = ?;";
+    $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+
+    $stmt->bindValue(1, $name);
+    $stmt->execute();
+
+    $row = $stmt->fetchall(PDO::FETCH_ASSOC);
+
+    if ($row) {
+      return $row;
+      
+    }
+    else {
+      $result = false;
+      return $result;
+    }
+
+    $stmt->close();
+  }
+
+  function getFamilyID($dbh, $name) {
+    $sql = "SELECT * FROM family WHERE family_name = ?;";
     $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 
     $stmt->bindValue(1, $name);
     $stmt->execute();
 
     $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
     if ($row) {
       return $row;
+      
     }
     else {
       $result = false;
@@ -115,28 +136,59 @@
       header("location: ../rsvp.php?error=wronglogin");
       exit();
     }
+    if (count($guestExists) > 1) {
+      foreach ($guestExists as $guest) {
+        $families[] = $guest["family_id"];
+      }
+      $families = array_unique($families);
+      foreach ($families as $family) {
+        $array[] = familyExists($dbh, $family);
+      }
+      
+      session_start();
+      $_SESSION["families"] = $array;
+      header("location: ../rsvp.php?page=multifamily");
+      exit();
+    }
 
+    
     session_start();
+    
+    $guestExists = $guestExists[0];
     $_SESSION["person_id"] = $guestExists["id"];
     $_SESSION["firstName"] = $guestExists["first_name"];
     $_SESSION["lastName"] = $guestExists["last_name"];
     $_SESSION["family_id"] = $guestExists["family_id"];
-    //email: $_SESSION["firstName"] = $guestExists["firstName"]
 
     $familyExists = familyExists($dbh, $_SESSION["family_id"], $_SESSION["person_id"]);
     $_SESSION["family_name"] = $familyExists["name"];
-    //$_SESSION["members"] = $familyExists["members"];
     $_SESSION["family_id"] = $familyExists["family_id"];
     $rsvp_status = getevents($dbh, $_SESSION["family_id"]);
     $_SESSION["rsvp_status"] = $rsvp_status;
-
+    
     if (count($familyExists["members"]) > 1) {
-      header("location: ../rsvp.php?guest=".trim($_SESSION["firstName"]) . " " .trim($_SESSION["lastName"]));
+      header("location: ../rsvp.php?family="  .trim($_SESSION["family_name"]));
+      
       exit();
     }
-    header("location: ../rsvp.php?guest=".trim($_SESSION["firstName"]) . " " .trim($_SESSION["firstName"]) . "&family="  .trim($_SESSION["family_name"]));
+    header("location: ../rsvp.php?family="  .trim($_SESSION["family_name"]));
     exit();
 
+  }
+
+  function loginFamily($dbh, $name) {
+    $family = getFamilyID($dbh, $name);
+    
+    session_start();
+    $_SESSION["family_id"] = $family["id"];
+    $familyExists = familyExists($dbh, $_SESSION["family_id"]);
+    $_SESSION["family_name"] = $familyExists["name"];
+    $_SESSION["family_id"] = $familyExists["family_id"];
+    $rsvp_status = getevents($dbh, $_SESSION["family_id"]);
+    $_SESSION["rsvp_status"] = $rsvp_status;
+  
+    header("location: ../rsvp.php?family="  .trim($_SESSION["family_name"]));
+    exit();
   }
 
 

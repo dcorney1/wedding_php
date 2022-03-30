@@ -1,0 +1,9 @@
+Array
+(
+    [id] => 10
+    [event_name] => Brunch
+    [guests_id] => 4
+    [guest_first_name] => Leslie
+    [guest_last_name] => Severance
+    [rsvp_flag] => 0
+)
