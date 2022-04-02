@@ -10,7 +10,6 @@ if (isset($_POST["submit"])) {
     $family = $_POST["family"];
     
     loginFamily($dbh, $family);
-    file_put_contents('../output_yeet.txt', print_r($_SESSION, true));
   }
   
   if (array_key_exists("name", $_POST)){
@@ -21,7 +20,6 @@ if (isset($_POST["submit"])) {
       exit();
    }
    loginUser($dbh, $name);
-   file_put_contents('../output_postloginuser.txt', print_r($_SESSION, true));
   }
 
 }

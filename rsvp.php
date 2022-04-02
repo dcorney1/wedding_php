@@ -99,7 +99,23 @@
              "<legend>". trim($participant["guest_first_name"]). " " .trim($participant["guest_last_name"]) .":</legend>
                <input label=\"Yes\" type=\"radio\" name=" . $participant["id"] . " " . $yes . " value=\"1\" oninput=\"this.className = ''\">
                <input label=\"No\" type=\"radio\" name=" . $participant["id"] . " " .  $no ." value=\"0\" oninput=\"this.className = ''\">";
-             }
+               if (isset($_SESSION["event_food"][$participant["event_id"]])){
+                
+                echo  "<legend>". "Food Selection" .":</legend>";
+
+                foreach ($_SESSION["event_food"][$participant["event_id"]] as $option) {
+                  $checked ="";
+                  if ($participant["food_id"] === $option["food_id"]) {
+                    $checked = "checked";
+                  }
+                  echo 
+                "<input label=\"" .$option["option"] . "\" type=\"radio\" name=" . $participant["id"] . "food" .  " " . $checked . " value=\"" .$option["food_id"]. "\" oninput=\"this.className = ''\">";
+                
+                }
+              }
+            }
+
+
            echo  "</div>";
          }
          echo

@@ -1,0 +1,149 @@
+Array
+(
+    [person_id] => 1
+    [firstName] => Daniel
+    [lastName] => Corney
+    [family_id] => 1
+    [family_name] => Maddie and Dan
+    [rsvp_status] => Array
+        (
+            [1] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 4
+                            [event_id] => 1
+                            [food_id] => 0
+                            [event_name] => Welcome Dinner
+                            [guests_id] => 1
+                            [guest_first_name] => Daniel
+                            [guest_last_name] => Corney
+                            [rsvp_flag] => 0
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 1
+                            [event_id] => 1
+                            [food_id] => 1
+                            [event_name] => Welcome Dinner
+                            [guests_id] => 2
+                            [guest_first_name] => Maddie
+                            [guest_last_name] => Severance
+                            [rsvp_flag] => 1
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 9
+                            [event_id] => 1
+                            [food_id] => 0
+                            [event_name] => Welcome Dinner
+                            [guests_id] => 4
+                            [guest_first_name] => GUEST
+                            [guest_last_name] => 
+                            [rsvp_flag] => 0
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 5
+                            [event_id] => 2
+                            [food_id] => 1
+                            [event_name] => Reception
+                            [guests_id] => 1
+                            [guest_first_name] => Daniel
+                            [guest_last_name] => Corney
+                            [rsvp_flag] => 1
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [event_id] => 2
+                            [food_id] => 0
+                            [event_name] => Reception
+                            [guests_id] => 2
+                            [guest_first_name] => Maddie
+                            [guest_last_name] => Severance
+                            [rsvp_flag] => 0
+                        )
+
+                )
+
+            [3] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 6
+                            [event_id] => 3
+                            [food_id] => 0
+                            [event_name] => Brunch
+                            [guests_id] => 1
+                            [guest_first_name] => Daniel
+                            [guest_last_name] => Corney
+                            [rsvp_flag] => 0
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 3
+                            [event_id] => 3
+                            [food_id] => 1
+                            [event_name] => Brunch
+                            [guests_id] => 2
+                            [guest_first_name] => Maddie
+                            [guest_last_name] => Severance
+                            [rsvp_flag] => 1
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 10
+                            [event_id] => 3
+                            [food_id] => 0
+                            [event_name] => Brunch
+                            [guests_id] => 4
+                            [guest_first_name] => GUEST
+                            [guest_last_name] => 
+                            [rsvp_flag] => 0
+                        )
+
+                )
+
+        )
+
+    [event_food] => Array
+        (
+            [2] => Array
+                (
+                    [0] => Array
+                        (
+                            [id] => 2
+                            [option] => Beef
+                            [food_id] => 1
+                        )
+
+                    [1] => Array
+                        (
+                            [id] => 2
+                            [option] => Chicken
+                            [food_id] => 2
+                        )
+
+                    [2] => Array
+                        (
+                            [id] => 2
+                            [option] => Mushroom Ravioli
+                            [food_id] => 3
+                        )
+
+                )
+
+        )
+
+)

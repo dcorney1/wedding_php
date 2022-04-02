@@ -69,12 +69,11 @@
   }
 
   function getevents($dbh, $familyid) {
-    $sql = "select a.id, a.event_id, b.event_name,c.guests_id, first_name, last_name,
+    $sql = "select a.id,a.food_id, a.event_id, b.event_name,c.guests_id, first_name, last_name,
     rsvp_flag from in_event a
     left join event b on a.event_id = b.id
     left join participate c on a.participate_id = c.id
     left join guests d on c.guests_id = d.id
-
     where d.family_id = ? order by event_id, d.id;";
     $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 /*
@@ -99,14 +98,14 @@
         $event_id = $row["event_id"];
         //$rsvps[] = array("event_id" => $event_id, array());
       }
-      $rsvps[$event_id][] = array("id" => $row["id"], "event_name" => $row["event_name"],"guests_id" => $row["guests_id"],"guest_first_name" => $row["first_name"],"guest_last_name" => $row["last_name"],"rsvp_flag" => $row["rsvp_flag"]);
+      $rsvps[$event_id][] = array("id" => $row["id"], "event_id" => $row["event_id"],  "food_id" => $row["food_id"], "event_name" => $row["event_name"],"guests_id" => $row["guests_id"],"guest_first_name" => $row["first_name"],"guest_last_name" => $row["last_name"],"rsvp_flag" => $row["rsvp_flag"]);
     //$rsvps[$event_id][] = array($row["id"],"event_name" => $row["event_name"],($row["first_name"],$row["last_name"],$row["rsvp_flag"]);)
     }
     return $rsvps;
   }
 
   function getfood($dbh) {
-    $sql = "select a.id, b.option from event a inner join food b on a.meal_id = b.meal;";
+    $sql = "select a.id, b.id as food_id, b.option from event a inner join food b on a.meal_id = b.meal;";
     $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
     $stmt->execute();
     $event_id = 0;
@@ -115,15 +114,13 @@
         $event_id = $row["id"];
         //$rsvps[] = array("event_id" => $event_id, array());
       }
-      $food[$event_id][] = $row["option"];
+      $food[$event_id][] = array("id" => $row["id"], "option" => $row["option"], "food_id" => $row["food_id"]);
     }
-    file_put_contents('../output_row.txt', print_r($food, true));
-    return $row;
+    return $food;
   }
 /*
     $var_str = var_export($row, true);
     $var = "<?php\n\n\$text = $var_str;\n\n?>";
-    file_put_contents('filename.php', $var);
     if ($row) {
       return $row;
     }
@@ -168,9 +165,6 @@
       header("location: ../rsvp.php?choosefamily");
       exit();
     }
-    //file_put_contents('../output_preunset.txt', print_r($_SESSION, true));
-
-    //file_put_contents('../output_postunset.txt', print_r($_SESSION, true));
     $guestExists = $guestExists[0];
     session_start();
     session_unset();
@@ -186,6 +180,7 @@
     $_SESSION["rsvp_status"] = $rsvp_status;
     $event_food = getfood($dbh);
     $_SESSION["event_food"] = $event_food;
+    
     header("location: ../rsvp.php?submiteduser");
     exit();
   }
@@ -203,18 +198,26 @@
     $_SESSION["rsvp_status"] = $rsvp_status;
     $event_food = getfood($dbh);
     $_SESSION["event_food"] = $event_food;
-    file_put_contents('../output_postunsetsession.txt', print_r($_SESSION, true));
     header("location: ../rsvp.php?submittedfamily");
     exit();
   }
 
 
   function updateRSVP($dbh, $idArray) {
-    $sql = "update in_event set rsvp_flag = ? where id = ?;";
-    $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+    
     foreach ($idArray as $key => $value) {
-        $stmt->execute([$value, $key]);
+      $sql = "update in_event set rsvp_flag = ? where id = ?;";
+      $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+      $stmt->execute([$value, $key]);
+      if (strpos($key, "food",) !== false) {
+        file_put_contents("../output_strpos.txt","Item Value: " . print_r($value,TRUE) ." KEY: " . print_r($key,TRUE));
+        $sql = "update in_event set food_id = ? where id = ?;";
+        $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+        $stmt->execute([$value, str_replace("food","",$key)]);
+      }
     }
+
+
     session_start();
     $rsvp_status = getevents($dbh, $_SESSION["family_id"]);
     $_SESSION["rsvp_status"] = $rsvp_status;
