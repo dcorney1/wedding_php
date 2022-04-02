@@ -1,14 +1,16 @@
 <?php
 //the buttons are not in the form so will not be included in the post
 
-
+session_start();
 if (isset($_POST["submit"])) {
+  
   require_once 'dbh.inc.php';
   require_once 'functions.inc.php';
   if (array_key_exists("family", $_POST)){
     $family = $_POST["family"];
+    
     loginFamily($dbh, $family);
-    exit();
+    file_put_contents('../output_yeet.txt', print_r($_SESSION, true));
   }
   
   if (array_key_exists("name", $_POST)){
@@ -18,8 +20,8 @@ if (isset($_POST["submit"])) {
       header("location: ../rsvp.php?error=emptyinput");
       exit();
    }
-   
    loginUser($dbh, $name);
+   file_put_contents('../output_postloginuser.txt', print_r($_SESSION, true));
   }
 
 }
@@ -31,6 +33,6 @@ else if (isset($_POST["rsvpForm"])) {
   updateRSVP($dbh, $updates);
 }
 else {
-  header("location: ../rsvp.php");
+  
   exit();
 }

@@ -1,4 +1,5 @@
 <?php
+    
      if (isset($_GET['rsvp'])) {
        if ($_GET['rsvp'] == "complete") {
          foreach ($_SESSION["rsvp_status"] as $event){
@@ -25,10 +26,13 @@
          }
        }
        else {
-         header("location: rsvp.php?");
+         header("location: rsvp.php");
        }
      }
-     elseif (isset($_GET['page'])) {
+     elseif (isset($_SESSION["families"])) {
+       if(isset($_SESSION["test"])) {
+         echo "<div>hi</div>";
+       }
       echo "<form action=\"includes/logout.inc.php\" method=\"post\">
       <button type=\"submit\" name=\"submit\">Not Any of These?</button>
       </form>";
@@ -41,6 +45,7 @@
        echo "</select>
        <button type=\"submit\" name=\"submit\">Submit</button>
        </form>";
+      
      }
      else {
         if (isset($_SESSION["family_name"])) {
@@ -98,8 +103,8 @@
 
         echo "</form>";
         }
-       }
-    // }
+      }
+         
 
 
     ?>

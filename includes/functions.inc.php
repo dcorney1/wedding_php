@@ -74,6 +74,7 @@
     left join event b on a.event_id = b.id
     left join participate c on a.participate_id = c.id
     left join guests d on c.guests_id = d.id
+
     where d.family_id = ? order by event_id, d.id;";
     $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 /*
@@ -102,6 +103,22 @@
     //$rsvps[$event_id][] = array($row["id"],"event_name" => $row["event_name"],($row["first_name"],$row["last_name"],$row["rsvp_flag"]);)
     }
     return $rsvps;
+  }
+
+  function getfood($dbh) {
+    $sql = "select a.id, b.option from event a inner join food b on a.meal_id = b.meal;";
+    $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+    $stmt->execute();
+    $event_id = 0;
+    while ($row = $stmt->fetch()) {
+      if ($event_id !== $row["id"]){
+        $event_id = $row["id"];
+        //$rsvps[] = array("event_id" => $event_id, array());
+      }
+      $food[$event_id][] = $row["option"];
+    }
+    file_put_contents('../output_row.txt', print_r($food, true));
+    return $row;
   }
 /*
     $var_str = var_export($row, true);
@@ -147,14 +164,16 @@
       
       session_start();
       $_SESSION["families"] = $array;
-      header("location: ../rsvp.php?page=multifamily");
+      
+      header("location: ../rsvp.php?choosefamily");
       exit();
     }
+    //file_put_contents('../output_preunset.txt', print_r($_SESSION, true));
 
-    
-    session_start();
-    
+    //file_put_contents('../output_postunset.txt', print_r($_SESSION, true));
     $guestExists = $guestExists[0];
+    session_start();
+    session_unset();
     $_SESSION["person_id"] = $guestExists["id"];
     $_SESSION["firstName"] = $guestExists["first_name"];
     $_SESSION["lastName"] = $guestExists["last_name"];
@@ -165,29 +184,27 @@
     $_SESSION["family_id"] = $familyExists["family_id"];
     $rsvp_status = getevents($dbh, $_SESSION["family_id"]);
     $_SESSION["rsvp_status"] = $rsvp_status;
-    
-    if (count($familyExists["members"]) > 1) {
-      header("location: ../rsvp.php?family="  .trim($_SESSION["family_name"]));
-      
-      exit();
-    }
-    header("location: ../rsvp.php?family="  .trim($_SESSION["family_name"]));
+    $event_food = getfood($dbh);
+    $_SESSION["event_food"] = $event_food;
+    header("location: ../rsvp.php?submiteduser");
     exit();
-
   }
 
   function loginFamily($dbh, $name) {
     $family = getFamilyID($dbh, $name);
-    
+
     session_start();
+    session_unset();
     $_SESSION["family_id"] = $family["id"];
     $familyExists = familyExists($dbh, $_SESSION["family_id"]);
     $_SESSION["family_name"] = $familyExists["name"];
     $_SESSION["family_id"] = $familyExists["family_id"];
     $rsvp_status = getevents($dbh, $_SESSION["family_id"]);
     $_SESSION["rsvp_status"] = $rsvp_status;
-  
-    header("location: ../rsvp.php?family="  .trim($_SESSION["family_name"]));
+    $event_food = getfood($dbh);
+    $_SESSION["event_food"] = $event_food;
+    file_put_contents('../output_postunsetsession.txt', print_r($_SESSION, true));
+    header("location: ../rsvp.php?submittedfamily");
     exit();
   }
 
@@ -204,5 +221,4 @@
 
     header("location: ../rsvp.php?rsvp=complete");
     exit();
-
 }
