@@ -101,6 +101,7 @@
       $rsvps[$event_id][] = array("id" => $row["id"], "event_id" => $row["event_id"],  "food_id" => $row["food_id"], "event_name" => $row["event_name"],"guests_id" => $row["guests_id"],"guest_first_name" => $row["first_name"],"guest_last_name" => $row["last_name"],"rsvp_flag" => $row["rsvp_flag"]);
     //$rsvps[$event_id][] = array($row["id"],"event_name" => $row["event_name"],($row["first_name"],$row["last_name"],$row["rsvp_flag"]);)
     }
+    file_put_contents("../output_rsvp.txt",print_r($rsvps,TRUE));
     return $rsvps;
   }
 
@@ -116,6 +117,7 @@
       }
       $food[$event_id][] = array("id" => $row["id"], "option" => $row["option"], "food_id" => $row["food_id"]);
     }
+    
     return $food;
   }
 /*

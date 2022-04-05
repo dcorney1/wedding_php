@@ -405,8 +405,13 @@ div img {
 }
 
 
+.buttons {
+	top: 50%;
+	transform: translate(-50%,-50%)
+}
+
 #prevBtn{
-	position: absolute;
+	position: relative;
 	top: 50%;
 	margin-top: -15px;
 	z-index: 5;
@@ -417,11 +422,11 @@ div img {
 	cursor: pointer;
 	text-align: center;
 	vertical-align: middle;
-	/* position: relative; */
+
 }
 
 #nextBtn{
-	position: absolute;
+	position: relative;
 	top: 50%;
 	margin-top: -15px;
 	z-index: 5;
@@ -432,8 +437,8 @@ div img {
 	cursor: pointer;
 	text-align: center;
 	vertical-align: middle;
-	/* position: relative; */
-}
+	
+} 
 
 .map-wrapper{
 	max-width: 500px;
@@ -466,6 +471,8 @@ div img {
 }
 
 .travel{
+	position: relative;
+	min-height: 45%;
 	margin: 0 10%;
 	margin: auto;
 	padding-top: 15px;
@@ -540,18 +547,59 @@ div img {
 	color: rgba(110, 115, 87, 1);
 }
 
+
+
 .red-btn:hover{
 	color:#fff;
 	border: 3px solid rgba(110, 115, 87, 1);
 }
 
+.logout-btn {
+	font-size: 16px;
+	border: 3px solid rgba(180, 21, 21,1);
+	background: #fff;
+	color: rgba(180, 21, 21,1);
+}
+
+.logout-btn:hover{
+	color:#fff;
+
+		border: 1px solid rgba(180, 21, 21,1);
+		background: rgba(180, 21, 21,1);
+		transition: 1s;
+	
+}
+
 /*Style the rsvpForm */
 #rsvpForm {
-  background-color: #ffffff;
-  margin: 100px auto;
-  padding: 40px;
+  /* background-color: #ffffff; */
+  margin: 0 auto;
+  padding: 5px 40px;
   width: 70%;
   min-width: 300px;
+}
+.form-group {
+	display: block;
+	min-height: 40px;
+}
+.form-group legend {
+	/* font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 18px;
+	color: #333;
+	height: 20px;
+	width: 200px;
+	margin-top: 10px;
+	margin-left: 10px;
+	text-align: right;
+	margin-right:15px; */
+	float:left;
+}
+.form-group input {
+	/* height: 20px;
+	width: 300px;
+	border: 1px solid #000;
+	margin-top: 10px; */
+	float:right;
 }
 
 /* Style the input fields */
@@ -598,12 +646,7 @@ input.invalid {
 /* stylize radio buttons */
 
 .radio {
-	background: #454857;
-	padding: 4px;
-	border-radius: 3px;
-	box-shadow: inset 0 0 0 3px rgba(35, 33, 45, 0.3),
-		0 0 0 3px rgba(185, 185, 185, 0.3);
-	position: relative;
+	background: rgba(69, 72, 87, 0);
 }
 
 .radio input {
@@ -1229,6 +1272,25 @@ input.invalid {
 	width:125px;
 }
 
+.lastname {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.nameform {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
+}
+
+
 #myForm #form_button:hover {
 	background: #474544;
 	color: #F2F3EB;
@@ -1292,4 +1354,6 @@ input.invalid {
 	  width: 53px;
 	}
 	
+
+
   }
