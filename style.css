@@ -404,41 +404,27 @@ div img {
 	/* max-width: 100%; */
 }
 
-
-.buttons {
-	top: 50%;
-	transform: translate(-50%,-50%)
+#progression-bar {
+	display: flex;
+	align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
 }
 
-#prevBtn{
-	position: relative;
-	top: 50%;
-	margin-top: -15px;
-	z-index: 5;
-	left: 5%;
-	font-size: 30px;
-	color: white;
-	opacity: 0.5;
-	cursor: pointer;
-	text-align: center;
-	vertical-align: middle;
-
+#progression-bar .column-center {
+  flex: 20%;
+}
+#progression-bar .column {
+  flex: 40%;
 }
 
-#nextBtn{
-	position: relative;
-	top: 50%;
-	margin-top: -15px;
-	z-index: 5;
-	right: 5%;
-	font-size: 30px;
-	color: white;
-	opacity: 0.5;
-	cursor: pointer;
-	text-align: center;
-	vertical-align: middle;
-	
-} 
+.tab {
+	width: 30%;
+	min-width:300px;
+}
+
+
 
 .map-wrapper{
 	max-width: 500px;
@@ -472,7 +458,7 @@ div img {
 
 .travel{
 	position: relative;
-	min-height: 45%;
+	min-height: calc(45% - 50px);
 	margin: 0 10%;
 	margin: auto;
 	padding-top: 15px;
@@ -563,6 +549,7 @@ div img {
 }
 
 .rsvp-btn{
+	max-width:250px;
 	width: 50%;
 }
 
@@ -581,7 +568,8 @@ div img {
   margin: 0 auto;
   padding: 5px 40px;
   width: 70%;
-  min-width: 300px;
+	min-width: 300px;
+	max-width: 800px;
 }
 .form-group {
 	display: block;
@@ -950,6 +938,16 @@ input.invalid {
 	color: black;
   }
 
+	.Not-family{
+		padding:30px;
+	}
+	#nextBtn{
+		float:left;
+	}
+	#prevBtn{
+		float:right;
+	}
+
   #page_photos {
 	/* Prevent vertical gaps */
 	line-height: 0;
@@ -1281,21 +1279,33 @@ input.invalid {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	width: 400px;
 	max-width: 50%;
 	margin-bottom: 30px; 
+	text-align:center;
+	text-transform: uppercase;
 }
-
+#rsvpform {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 30px 0px;
+	min-height: calc(45% - 80px)
+}
+#idform {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	padding: 30px 0px;
+	min-height: calc(45% - 80px)
+}
 .nameform {
 	display: block;
-	position: absolute;
-	top: 50%;
-	left: 50%;
+
+
 	width:100%;
-	transform: translate(-50%,-50%);
-	-ms-transform: translate(-50%,-50%);
-	-moz-transform: translate(-50%,-50%);
-	-webkit-transform: translate(-50%,-50%);
-	-o-transform: translate(-50%,-50%);
+
 }
 
 

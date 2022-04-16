@@ -1,6 +1,6 @@
 <?php
   function uidExists($dbh, $name) {
-    $sql = "SELECT * FROM guests WHERE last_name = ?;";
+    $sql = "SELECT * FROM guests WHERE lower(last_name) = lower(?);";
     $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 
     $stmt->bindValue(1, $name);

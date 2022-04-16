@@ -91,8 +91,8 @@
           echo
           "<div style=\"overflow:auto;\">
             <div style=\"float:right;\">
-              <button type=\"button\" id=\"prevBtn\" onclick=\"nextPrev(-1)\">Previous</button>
-              <button type=\"button\" id=\"nextBtn\" onclick=\"nextPrev(1)\">Next</button>
+            <button type=\"button\" id=\"prevBtn\" onclick=\"nextPrev(-1)\"><i class=\"fa fa-arrow-circle-left\" aria-hidden=\"true\"></i></button>
+            <button type=\"button\" id=\"nextBtn\" onclick=\"nextPrev(1)\"><i class=\"fa fa-arrow-circle-right\" aria-hidden=\"true\"></i></button>
             </div>
           </div>
           <div style=\"text-align:center;margin-top:40px;\">";

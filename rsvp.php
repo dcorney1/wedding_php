@@ -10,8 +10,8 @@
 </div>
 </section>
 
- <section class="travel">
-  <div class="nameform">
+ <section class="travel" id="rsvpform">
+  
     
     <?php
     if (isset($_GET['rsvp'])) {
@@ -47,7 +47,7 @@
 
 
      echo "
-     <form action=\"includes/rsvp.inc.php\" method=\"post\">
+     <form id=\"idform\" action=\"includes/rsvp.inc.php\" method=\"post\">
      <select class=\"rsvp-select\" name=\"family\" id=\"familyID\" >";
       foreach ($_SESSION["families"] as $family) {
        echo "<option>" . trim($family["name"]) . "</option>";
@@ -65,7 +65,7 @@
     }
     else {
        if (isset($_SESSION["family_name"])) {
-         echo "<p>Welcome ". trim($_SESSION["family_name"]). "!</p>";
+         echo "<h2>Welcome ". trim($_SESSION["family_name"]). "!</h2>";
        }
        else {
          echo "
@@ -76,11 +76,11 @@
        }
        if (isset($_SESSION["rsvp_status"])){
          // id=\"rsvpForm\"
-         echo "<form id=\"rsvpForm\" name=\"rsvpForm\" action=\"includes/rsvp.inc.php\" method=\"post\">
+         echo "<form id=\"idform\" name=\"rsvpForm\" action=\"includes/rsvp.inc.php\" method=\"post\">
          <input type=\"hidden\" name=\"rsvpForm\" value=\"\"/>";
          foreach ($_SESSION["rsvp_status"] as $event){
            $event_name = $event[0]["event_name"];
-           echo "<div class=\"tab radio\">" . $event_name . ":";
+           echo "<div class=\"tab radio\"><h3>" . $event_name . ":</h3>";
            foreach ($event as $participant){
              if ($participant["rsvp_flag"] == "0") {
                $yes = "";
@@ -120,22 +120,26 @@
 
            echo  "</div>";
          }
+         echo "</form>";
          echo
-         "<div style=\"overflow:auto;\">";
-         echo "<div style=\"text-align:center;margin-top:40px;\">";
+         "<div id=\"progression-bar\">
+         <div class=\"column\">
+         <button type=\"button\" id=\"prevBtn\" onclick=\"nextPrev(-1)\" >Previous</button>
+         </div>
+         <div class=\"column-center\">";
          foreach ($_SESSION["rsvp_status"] as $event){
            echo "<span class=\"step\"></span>";
          }
          echo "</div>
-           <div class=\"buttons\" style=\"float:right;\">
-             <button type=\"button\" id=\"prevBtn\" onclick=\"nextPrev(-1)\">Previous</button>
-             <button type=\"button\" id=\"nextBtn\" onclick=\"nextPrev(1)\">Next</button>
-           </div>
-         </div>
+
+         <div class=\"column\">     
+             <button type=\"button\" id=\"nextBtn\" onclick=\"nextPrev(1)\" ><i class=\"fa fa-arrow-circle-right\" aria-hidden=\"true\"></i></button>
+             </div>
+         </div>";
 
 
-       </form>";
-       echo "         <form action=\"includes/logout.inc.php\" method=\"post\">
+       
+       echo "         <form class=\"Not-family\" action=\"includes/logout.inc.php\" method=\"post\">
        <button class=\"hero-btn logout-btn rsvp-btn\" type=\"submit\" name=\"submit\">Not \"". trim($_SESSION["family_name"]). "\"?</button>
        </form>";
        }
@@ -157,7 +161,7 @@
          }
    }
   ?> 
-</div>
+
   <!-- <button class="open-button rsvp" onclick="openForm()">Having difficulty? Click here.</button> -->
   <div class="form-popup" id="myForm">
   <h1>Ask Us!</h1>
