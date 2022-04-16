@@ -1,10 +1,17 @@
 <?php
+    
      if (isset($_GET['rsvp'])) {
        if ($_GET['rsvp'] == "complete") {
          foreach ($_SESSION["rsvp_status"] as $event){
+           foreach ($event as $participant){
+             if ($participant["guest_first_name"] == "GUEST") {
+              echo "<p>Would you like to update your guest's details?</p>";
+             }
+           }
            $event_name = $event[0]["event_name"];
            echo "<div>" . $event_name . ":";
            foreach ($event as $participant){
+            
              if ($participant["rsvp_flag"] == "0") {
                echo "<p>" . trim($participant["guest_first_name"]). " " . trim($participant["guest_last_name"]). " is not coming</p>";
              }
@@ -19,20 +26,38 @@
          }
        }
        else {
-         header("location: rsvp.php?");
+         header("location: rsvp.php");
        }
      }
+     elseif (isset($_SESSION["families"])) {
+       if(isset($_SESSION["test"])) {
+         echo "<div>hi</div>";
+       }
+      echo "<form action=\"includes/logout.inc.php\" method=\"post\">
+      <button type=\"submit\" name=\"submit\">Not Any of These?</button>
+      </form>";
+      echo "
+      <form action=\"includes/rsvp.inc.php\" method=\"post\">
+      <select name=\"family\" id=\"familyID\" >";
+       foreach ($_SESSION["families"] as $family) {
+        echo "<option>" . trim($family["name"]) . "</option>";
+       }
+       echo "</select>
+       <button type=\"submit\" name=\"submit\">Submit</button>
+       </form>";
+      
+     }
      else {
-        if (isset($_SESSION["person_id"])) {
-          echo "<p>Welcome ". trim($_SESSION["firstName"]). "!</p>
+        if (isset($_SESSION["family_name"])) {
+          echo "<p>Welcome ". trim($_SESSION["family_name"]). "!</p>
           <form action=\"includes/logout.inc.php\" method=\"post\">
-          <button type=\"submit\" name=\"submit\">Not ". trim($_SESSION["firstName"]). "!</button>
+          <button type=\"submit\" name=\"submit\">Not ". trim($_SESSION["family_name"]). "!</button>
           </form>";
         }
         else {
           echo "
           <form action=\"includes/rsvp.inc.php\" method=\"post\">
-          <input type=\"text\" name=\"name\" placeholder=\"Full name...\">
+          <input type=\"text\" name=\"name\" placeholder=\"Last Name...\">
           <button type=\"submit\" name=\"submit\">RSVP</button>
           </form>";
         }
@@ -66,8 +91,8 @@
           echo
           "<div style=\"overflow:auto;\">
             <div style=\"float:right;\">
-              <button type=\"button\" id=\"prevBtn\" onclick=\"nextPrev(-1)\">Previous</button>
-              <button type=\"button\" id=\"nextBtn\" onclick=\"nextPrev(1)\">Next</button>
+            <button type=\"button\" id=\"prevBtn\" onclick=\"nextPrev(-1)\"><i class=\"fa fa-arrow-circle-left\" aria-hidden=\"true\"></i></button>
+            <button type=\"button\" id=\"nextBtn\" onclick=\"nextPrev(1)\"><i class=\"fa fa-arrow-circle-right\" aria-hidden=\"true\"></i></button>
             </div>
           </div>
           <div style=\"text-align:center;margin-top:40px;\">";
@@ -78,8 +103,8 @@
 
         echo "</form>";
         }
-       }
-    // }
+      }
+         
 
 
     ?>
