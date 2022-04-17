@@ -941,12 +941,16 @@ input.invalid {
 	#nextBtn{
 		float:left;
 		font-size: 14px;
-    border: 1px solid rgba(110, 115, 87, 1);
+		border: 1px solid rgba(110, 115, 87, 1);
+		max-width: 90px;
+		padding: 10px;
 	}
 	#prevBtn{
 		float:right;
 		font-size: 14px;
-    border: 1px solid rgba(110, 115, 87, 1);
+		border: 1px solid rgba(110, 115, 87, 1);
+		max-width: 90px;
+		padding: 10px;
 	}
 	#nextBtn:hover{
 		background: #fff;
