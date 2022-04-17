@@ -62,7 +62,7 @@
       
       </form>
       <form action=\"includes/logout.inc.php\" method=\"post\">
-      <button class=\"hero-btn logout-btn rsvp-btn\" type=\"submit\" name=\"submit\">Not Any of These?</button>
+      <button class=\"hero-btn logout-btn rsvp-btn\" type=\"submit\" name=\"submit\">I am someone else.</button>
       </form>";
      
     }
@@ -99,13 +99,14 @@
              }
              echo
              "<div class=\"form-group\">
-             <legend>". trim($participant["guest_first_name"]). " " .trim($participant["guest_last_name"]) .":</legend>
+             <div>
+             <legend>". trim($participant["guest_first_name"]). " " .trim($participant["guest_last_name"]) .":</legend></div><div>
                <input label=\"Yes\" type=\"radio\" name=" . $participant["id"] . " " . $yes . " value=\"1\" oninput=\"this.className = ''\">
-               <input label=\"No\" type=\"radio\" name=" . $participant["id"] . " " .  $no ." value=\"0\" oninput=\"this.className = ''\"></div>";
+               <input label=\"No\" type=\"radio\" name=" . $participant["id"] . " " .  $no ." value=\"0\" oninput=\"this.className = ''\"></div></div>";
 
                if (isset($_SESSION["event_food"][$participant["event_id"]])){
                 
-                echo  "<div class=\"form-group\"><legend>". "Food Selection" .":</legend>";
+                echo  "<div class=\"form-group\"><div></div><div>";
 
                 foreach ($_SESSION["event_food"][$participant["event_id"]] as $option) {
                   $checked ="";
@@ -116,7 +117,7 @@
                 "<input label=\"" .$option["option"] . "\" type=\"radio\" name=" . $participant["id"] . "food" .  " " . $checked . " value=\"" .$option["food_id"]. "\" oninput=\"this.className = ''\">";
                 
                 }
-                echo "</div>";
+                echo "</div></div>";
               }
             }
 
@@ -127,7 +128,7 @@
          echo
          "<div id=\"progression-bar\">
          <div class=\"column\">
-         <button type=\"button\" id=\"prevBtn\" onclick=\"nextPrev(-1)\" >Previous</button>
+         <button type=\"button\" class=\"hero-btn red-btn rsvp-btn\" id=\"prevBtn\" onclick=\"nextPrev(-1)\" >Previous</button>
          </div>
          <div class=\"column-center\">";
          foreach ($_SESSION["rsvp_status"] as $event){
@@ -136,14 +137,14 @@
          echo "</div>
 
          <div class=\"column\">     
-             <button type=\"button\" id=\"nextBtn\" onclick=\"nextPrev(1)\" ><i class=\"fa fa-arrow-circle-right\" aria-hidden=\"true\"></i></button>
+             <button type=\"button\" class=\"hero-btn red-btn rsvp-btn\" id=\"nextBtn\" onclick=\"nextPrev(1)\" ><i class=\"fa fa-arrow-circle-right\" aria-hidden=\"true\"></i></button>
              </div>
          </div>";
 
 
        
        echo "         <form class=\"Not-family\" action=\"includes/logout.inc.php\" method=\"post\">
-       <button class=\"hero-btn logout-btn rsvp-btn\" type=\"submit\" name=\"submit\">Not \"". trim($_SESSION["family_name"]). "\"?</button>
+       <button class=\"hero-btn logout-btn rsvp-btn\" type=\"submit\" name=\"submit\">I am someone else.</button>
        </form>";
        }
      }
