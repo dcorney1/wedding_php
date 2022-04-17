@@ -37,7 +37,9 @@
             }
           }
           echo "</div>";
+          
         }
+        echo "<div><button class=\"open-button rsvp\" onclick=\"openForm()\">I have a dietary restriction.</button></div>";
       }
       else {
         header("location: rsvp.php");
@@ -47,10 +49,11 @@
 
 
      echo "
+     <h3>Please select your family:</h3>
      <form id=\"idform\" action=\"includes/rsvp.inc.php\" method=\"post\">
      <select class=\"rsvp-select\" name=\"family\" id=\"familyID\" >";
       foreach ($_SESSION["families"] as $family) {
-       echo "<option>" . trim($family["name"]) . "</option>";
+       echo "<option style=\"word-wrap:break-word\">" . trim($family["name"]) . "</option>";
       }
  
       echo "</select>
@@ -162,7 +165,7 @@
    }
   ?> 
 
-  <!-- <button class="open-button rsvp" onclick="openForm()">Having difficulty? Click here.</button> -->
+  
   <div class="form-popup" id="myForm">
   <h1>Ask Us!</h1>
   <div class="underline">
@@ -184,11 +187,10 @@
     </div>
     <div class="subject">
       <label for="subject"></label>
-      <select placeholder="Subject line" name="subject" id="subject_input" required>
-        <option disabled hidden selected>Subject line</option>
-        <option>I have a question about</option>
-        <option>I want to inform you that</option>
-        <option>My favorite song is: (no guarantees)</option>
+      <select placeholder="I have a dietary restriction/preference" name="subject" id="subject_input" required>
+        <!-- <option disabled hidden selected>Subject line</option> -->
+        <option>I have a dietary restriction/preference</option>
+        <option>Other</option>
       </select>
     </div>
     <div class="message">
