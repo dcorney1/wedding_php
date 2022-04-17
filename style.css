@@ -642,28 +642,34 @@ input.invalid {
 	background: rgba(69, 72, 87, 0);
 }
 
+.form-group{
+	padding: 10px 0px;
+}
+
 .radio input {
 	width: auto;
 	height: 100%;
 	appearance: none;
+	-webkit-appearance: none; /*for Safari and Chrome */
+	-moz-appearance: none; /*for Firefox */
 	outline: none;
 	cursor: pointer;
 	border-radius: 2px;
 	padding: 4px 8px;
-	background: #454857;
-	color: #bdbdbdbd;
+	/* background: #454857; */
+	/* color: #bdbdbdbd; */
 	font-size: 14px;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+	/* font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 	transition: all 100ms linear;
 }
 
 .radio input:checked {
-	background-image: linear-gradient(180deg, #95d891, #74bbad);
-	color: #fff;
-	box-shadow: 0 1px 1px #0000002e;
-	text-shadow: 0 1px 0px #79485f7a;
+	background-image: linear-gradient(180deg, #95d891, #74bbad); 
+	color: black; 
+	/* box-shadow: 0 1px 1px #0000002e; */
+	/* text-shadow: 0 1px 0px #79485f7a; */
 }
 
 .radio input:before {
