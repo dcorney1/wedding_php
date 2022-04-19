@@ -49,7 +49,7 @@
 
 
      echo "
-     <h3>Please select your family:</h3>
+     <h3>Please select your family from the dropdown:</h3>
      <form id=\"idform\" action=\"includes/rsvp.inc.php\" method=\"post\">
      <select class=\"rsvp-select\" name=\"family\" id=\"familyID\" >";
       foreach ($_SESSION["families"] as $family) {
@@ -62,7 +62,7 @@
       
       </form>
       <form action=\"includes/logout.inc.php\" method=\"post\">
-      <button class=\"hero-btn logout-btn rsvp-btn\" type=\"submit\" name=\"submit\">I am someone else.</button>
+      <button class=\"hero-btn logout-btn rsvp-btn\" type=\"submit\" name=\"submit\">Start Over?</button>
       </form>";
      
     }
@@ -144,7 +144,7 @@
 
        
        echo "         <form class=\"Not-family\" action=\"includes/logout.inc.php\" method=\"post\">
-       <button class=\"hero-btn logout-btn rsvp-btn\" type=\"submit\" name=\"submit\">I am someone else.</button>
+       <button class=\"hero-btn logout-btn rsvp-btn\" type=\"submit\" name=\"submit\">Start Over?</button>
        </form>";
        }
      }
