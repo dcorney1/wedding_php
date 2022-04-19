@@ -1224,7 +1224,7 @@ input.invalid {
 	width: 45%;
 }
 
-#myForm select {
+select {
   background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
   outline: none;
   -moz-appearance: none;
@@ -1330,6 +1330,13 @@ input.invalid {
 		max-width: 50%;
 		text-align: center;
 		overflow-wrap: anywhere;
+		border: 2px solid black;
+		padding: 0.875em;
+		border-radius: 20px;
+		margin: 0 0 1em 0;
+	}
+	.rsvp-select option  {
+		
 	}
 
   @media screen and (max-width: 1000px) {
