@@ -25,7 +25,7 @@ if (isset($_POST["submit"])) {
     $email->setSubject($subject);
     $email->addTo("dan.e.corney+weddingfaq@gmail.com", "Dan Corney");
     $email->addTo("maddiesev+weddingfaq@gmail.com", "Maddie Severance");
-    $email->addContent("text/plain", $message);
+    $email->addContent("text/plain", $message . "\n\n" . $_POST["email"]);
     $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
     try {
         $response = $sendgrid->send($email);

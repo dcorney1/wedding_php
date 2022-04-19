@@ -101,7 +101,6 @@
       $rsvps[$event_id][] = array("id" => $row["id"], "event_id" => $row["event_id"],  "food_id" => $row["food_id"], "event_name" => $row["event_name"],"guests_id" => $row["guests_id"],"guest_first_name" => $row["first_name"],"guest_last_name" => $row["last_name"],"rsvp_flag" => $row["rsvp_flag"]);
     //$rsvps[$event_id][] = array($row["id"],"event_name" => $row["event_name"],($row["first_name"],$row["last_name"],$row["rsvp_flag"]);)
     }
-    file_put_contents("../output_rsvp.txt",print_r($rsvps,TRUE));
     return $rsvps;
   }
 
@@ -212,7 +211,6 @@
       $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
       $stmt->execute([$value, $key]);
       if (strpos($key, "food",) !== false) {
-        file_put_contents("../output_strpos.txt","Item Value: " . print_r($value,TRUE) ." KEY: " . print_r($key,TRUE));
         $sql = "update in_event set food_id = ? where id = ?;";
         $stmt = $dbh->prepare($sql, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
         $stmt->execute([$value, str_replace("food","",$key)]);
