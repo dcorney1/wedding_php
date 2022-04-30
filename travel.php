@@ -29,7 +29,7 @@
   <div class="row">
       <div class="travel-col">
         <h2><i class="fa fa-plane" aria-hidden="true"></i>  Flying  <i class="fa fa-plane" aria-hidden="true"></i></h2>
-        <h3>Burlington International Airport (BVT)</h3>
+        <h3>Burlington International Airport (BTV)</h3>
         <p>The closest airport is Burlington International Airport (BVT). It is a 15 minute drive from The Essex. The Essex has shuttles that will transport guests to and from the airport. Call the front desk to arrange airport transportation. Uber/Lyft are also available in the area.</p>
       </div>
       <div class="divider">
