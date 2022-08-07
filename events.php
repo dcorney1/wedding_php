@@ -25,7 +25,20 @@ if (isset($_SESSION["person_id"])) {
         </div>";
         }
         ?>
+  <div class="date-header">
+    <h1>Thursday, August 25th</h1>
+    <div class="row">
+        <div class="travel-col">
+        <h2>Brewery Night</h2>
+        <div class="details">
+          <p class="event_location">Burlington Beer Company</p>
+          <p>180 Flynn Ave,</p><p> Burlington, VT 05401</p>
+          <p class="event_time">6 to 8 PM</p>
+          <p>Message Maddie or Dan for more details.</p>
+        </div>
+      </div>
 
+  </div>
   <div class="date-header">
     <h1>Friday, August 26th</h1>
     <div class="row">
