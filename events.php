@@ -34,7 +34,7 @@ if (isset($_SESSION["person_id"])) {
           <p class="event_location">Burlington Beer Company</p>
           <p>180 Flynn Ave,</p><p> Burlington, VT 05401</p>
           <p class="event_time">6 to 8 PM</p>
-          <p>Message Maddie or Dan for more details.</p>
+          <p><a href="https://www.google.com/maps/d/u/0/edit?mid=1IJCJtkLuToIik2lIvQTB2pLSY748hJw&usp=sharing" target="_blank">Click this map for details!</a></p>
         </div>
       </div>
 
