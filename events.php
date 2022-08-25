@@ -35,6 +35,7 @@ if (isset($_SESSION["person_id"])) {
           <p>180 Flynn Ave,</p><p> Burlington, VT 05401</p>
           <p class="event_time">6 to 8 PM</p>
           <p><a href="https://www.google.com/maps/d/u/0/edit?mid=1IJCJtkLuToIik2lIvQTB2pLSY748hJw&usp=sharing" target="_blank">Click this map for details!</a></p>
+          <p><a href="https://maps.app.goo.gl/9gQz9kuCJotvZZ8b9" target="_blank">You can check our current location here!</a></p>
         </div>
       </div>
 
